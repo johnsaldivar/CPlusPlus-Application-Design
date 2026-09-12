@@ -7,8 +7,8 @@
 
 ![C++](https://img.shields.io/badge/Language-C%2B%2B-00599C?style=for-the-badge&logo=cplusplus&logoColor=white)
 ![Project](https://img.shields.io/badge/Project-Inventory%20Manager-2ea44f?style=for-the-badge)
-![Module](https://img.shields.io/badge/Current%20Module-02-blue?style=for-the-badge)
-![Progress](https://img.shields.io/badge/Progress-Module%2002%20Complete-success?style=for-the-badge)
+![Module](https://img.shields.io/badge/Latest%20Module-03-blue?style=for-the-badge)
+![Progress](https://img.shields.io/badge/Progress-Module%2003%20Complete-success?style=for-the-badge)
 ![GitHub](https://img.shields.io/badge/GitHub-johnsaldivar-181717?style=for-the-badge&logo=github)
 
 **Developed by [John Saldivar](https://github.com/johnsaldivar)**
@@ -51,24 +51,28 @@ My semester project is an **Inventory Manager**.
 The **Inventory Manager** is a command-line C++ application designed to
 manage inventory records.
 
-The project begins with a simple application structure and will continue
-to grow as new C++ concepts are introduced throughout the course.
+The project begins with a simple application structure and continues to
+grow as new C++ concepts are introduced throughout the course.
 
 The goal is to eventually provide a system where users can add, view,
-search, update, remove, organize, and store inventory information.
+search, update, remove, organize, and permanently store inventory
+information.
+
+Each module adds another layer to the application.
 
 ---
 
 ## 🎯 Project Goals
 
-The Inventory Manager will be developed incrementally throughout the
+The Inventory Manager is being developed incrementally throughout the
 semester.
 
 The project is intended to demonstrate:
 
 - C++ fundamentals
+- Variables and data types
+- Console input and output
 - Application design
-- User input and output
 - Menu-driven application flow
 - Functions
 - Data structures
@@ -114,12 +118,19 @@ during the course.
 
 ## Core C++
 
-Throughout the course, I will practice concepts including:
+Concepts introduced or planned throughout the course include:
 
 - `main()`
 - Variables
 - Data types
-- Strings
+- `string`
+- `int`
+- `double`
+- `float`
+- `char`
+- `bool`
+- `cin`
+- `cout`
 - Console input and output
 - Conditional logic
 - `switch/case`
@@ -165,6 +176,8 @@ Application-level concepts include:
 
 - Menu design
 - Application flow
+- User input
+- Console output
 - Input validation
 - Searching
 - Algorithms
@@ -213,6 +226,9 @@ CPlusPlus-Application-Design/
 │   └── inventory_manager.cpp
 │
 ├── Module03-Datasets-Arrays-Pointers/
+│   ├── README.md
+│   └── inventory_welcome.cpp
+│
 ├── Module04-Functions-Headers/
 ├── Module05-Classes-Objects/
 ├── Module06-Records-Storage/
@@ -229,7 +245,7 @@ CPlusPlus-Application-Design/
 
 > **Note:** Module directory names were created during the initial repository
 > setup and are retained for organizational consistency. The README inside
-> each module contains the actual assignment title and topics covered.
+> each module documents the actual assignment title and concepts covered.
 
 ---
 
@@ -239,7 +255,7 @@ CPlusPlus-Application-Design/
 |:---:|---|:---:|
 | 01 | [Development Environment & GitHub](./Module01-Setup/) | ✅ Complete |
 | 02 | [Menus, Switch Case & Application Flow](./Module02-Variables/) | ✅ Complete |
-| 03 | Datasets, Arrays & Pointers | ⏳ Upcoming |
+| 03 | [Variables, Cin & Cout](./Module03-Datasets-Arrays-Pointers/) | ✅ Complete |
 | 04 | Functions & Headers | ⏳ Upcoming |
 | 05 | Classes & Objects | ⏳ Upcoming |
 | 06 | Records & Storage | ⏳ Upcoming |
@@ -284,7 +300,7 @@ will be used throughout the course.
 Module 2 established the main navigation and application-flow structure
 for the **Inventory Manager**.
 
-The program now includes a menu that remains active until the user chooses
+The program includes a menu that remains active until the user chooses
 to exit.
 
 The menu uses functions, a loop, a `switch/case` statement, and input
@@ -332,68 +348,192 @@ record-management functionality.
 
 ---
 
-# 🔀 Current Application Flow
+## Module 03 — Variables, Cin & Cout
 
-Module 2 introduced the basic control flow for the Inventory Manager.
+Module 3 introduced the variables and basic data types that applications
+use to store information.
+
+For this assignment, the Inventory Manager was expanded with a
+personalized **Welcome to My Application** program.
+
+The program asks the user for their name and stores information related
+to the application using multiple C++ data types.
+
+### Module 03 Welcome Screen
 
 ```text
-                 Start
-                   │
-                   ▼
-          ┌─────────────────┐
-          │ Display Main    │
-          │      Menu       │
-          └────────┬────────┘
-                   │
-                   ▼
-          ┌─────────────────┐
-          │ Get User Choice │
-          └────────┬────────┘
-                   │
-                   ▼
-          ┌─────────────────┐
-          │ Validate Input  │
-          └────────┬────────┘
-                   │
-                   ▼
-             switch(choice)
-                   │
-       ┌───────────┼────────────┐
-       │           │            │
-       ▼           ▼            ▼
-   Add Item    View Items    Search
-       │           │            │
-       ├───────────┼────────────┤
-       │           │            │
-       ▼           ▼            ▼
-    Update       Remove        Exit
-       │           │            │
-       └───────────┴──────┐     │
-                          │     │
-                          ▼     │
-                   Display Menu │
-                       Again    │
-                               ▼
-                           End Program
+Enter your name: John Saldivar
+
+========================================
+       WELCOME TO INVENTORY MANAGER
+========================================
+User: John Saldivar
+Application: Inventory Manager
+Version: 0.3
+
+--- Application Information ---
+Current Item Count: 0
+Sample Item Price: $19.99
+Inventory Status Code: A
+Application Ready: true
+
+--- Inventory Manager Features ---
+1. Add Item
+2. View Inventory
+3. Search Inventory
+4. Update Item
+5. Remove Item
+6. Exit
+
+Welcome, John Saldivar!
+Inventory Manager is ready for development.
 ```
+
+### Variables Used
+
+| Variable | Data Type | Purpose |
+|---|---|---|
+| `userName` | `string` | Stores the user's name |
+| `applicationName` | `string` | Stores the application name |
+| `versionNumber` | `double` | Stores the application version |
+| `currentItemCount` | `int` | Stores the number of inventory items |
+| `sampleItemPrice` | `double` | Demonstrates storing an item price |
+| `inventoryStatus` | `char` | Stores a one-character status code |
+| `applicationReady` | `bool` | Stores whether the application is ready |
+
+The assignment required at least **six variables** using at least **four
+different C++ data types**.
+
+The completed program uses:
+
+```text
+7 Variables
+5 Different Data Types
+```
+
+### Completed
+
+- [x] Inventory Manager connected to Module 3
+- [x] Personalized welcome screen created
+- [x] User name stored in a variable
+- [x] Application name stored in a variable
+- [x] Version number stored in a variable
+- [x] At least six application variables created
+- [x] At least four different C++ data types used
+- [x] `string` used
+- [x] `int` used
+- [x] `double` used
+- [x] `char` used
+- [x] `bool` used
+- [x] User input captured
+- [x] `cout` used to display information
+- [x] Every variable displayed
+- [x] Program compiled successfully
+- [x] Program tested successfully
+- [x] Module 3 files uploaded to GitHub
+- [x] Module 3 completed
+
+➡️ **[View Module 03](./Module03-Datasets-Arrays-Pointers/)**
+
+---
+
+# 🧩 Current Application Architecture
+
+After three modules, the Inventory Manager has several important
+foundations.
+
+```text
+                  INVENTORY MANAGER
+                         │
+          ┌──────────────┼──────────────┐
+          │              │              │
+          ▼              ▼              ▼
+ Development         Application      Application
+ Environment            Flow             Data
+  Module 01           Module 02         Module 03
+          │              │              │
+          ▼              ▼              ▼
+       GitHub           Menu          Variables
+       Setup            Loop          Strings
+       Testing       Switch/Case      Numbers
+       Commits        Functions       Status Values
+          │              │              │
+          └──────────────┼──────────────┘
+                         │
+                         ▼
+                  Future Features
+```
+
+Module 1 established the development environment.
+
+Module 2 established how users navigate the application.
+
+Module 3 introduced the information that the application needs to store
+and display.
+
+Future modules will continue connecting these concepts together.
+
+---
+
+# 🔗 How Variables Connect to the Project
+
+Variables are the foundation of the information that the Inventory Manager
+will eventually store.
+
+```text
+Variable
+   │
+   ▼
+Data
+   │
+   ▼
+Inventory Record
+   │
+   ▼
+Object / Class
+   │
+   ▼
+File or Database
+   │
+   ▼
+Application Feature
+```
+
+Future inventory records may contain information such as:
+
+```text
+Item ID
+Item Name
+Category
+Quantity
+Price
+Availability
+```
+
+Each piece of information begins as a variable.
 
 ---
 
 # 🏗️ Application Development Roadmap
 
-The Inventory Manager will evolve as new concepts are introduced.
+The Inventory Manager will continue to evolve as new concepts are
+introduced.
 
 ```text
 Module 01
-Development Environment
+Development Environment & GitHub
         │
         ▼
 Module 02
-Main Menu & Application Flow
+Menus, Switch Case & Application Flow
         │
         ▼
-Module 03+
-Inventory Data
+Module 03
+Variables, Cin & Cout
+        │
+        ▼
+Future Modules
+Application Data & Features
         │
         ▼
 Arrays / Data Structures
@@ -423,8 +563,8 @@ Advanced Application Features
 Final Inventory Manager
 ```
 
-Each module will build upon concepts and functionality introduced in
-previous modules.
+Each module builds upon concepts and functionality introduced in previous
+modules.
 
 ---
 
@@ -482,17 +622,29 @@ Each module is tested before being considered complete.
 
 Testing may include:
 
+- Successful compilation
 - Valid user input
 - Invalid user input
 - Boundary values
 - Menu navigation
 - Expected program output
+- Data display
 - Exit behavior
 - Compilation errors
 - Runtime errors
 
-For Module 2, the application was tested using valid and invalid input such
-as:
+---
+
+## Module 01 Testing
+
+The Module 1 environment test was compiled and executed successfully,
+confirming that the C++ development environment was configured correctly.
+
+---
+
+## Module 02 Testing
+
+Module 2 was tested using valid and invalid menu input such as:
 
 ```text
 1
@@ -506,8 +658,27 @@ hello
 6
 ```
 
-The program correctly handles invalid input and continues running until the
-user selects **Exit**.
+The application correctly handles invalid input and continues running
+until the user selects **Exit**.
+
+---
+
+## Module 03 Testing
+
+Module 3 was compiled and tested successfully.
+
+A full name was entered through the console and the application correctly
+displayed all seven variables, including:
+
+- User name
+- Application name
+- Version number
+- Current item count
+- Sample item price
+- Inventory status
+- Application-ready state
+
+The program completed normally without errors.
 
 ---
 
@@ -517,17 +688,17 @@ The application requires a compatible C++ compiler.
 
 ## Using Visual Studio
 
-1. Open the project in Visual Studio.
+1. Open the desired C++ project in Visual Studio.
 2. Build the solution.
 3. Verify that the build completes successfully.
 4. Run the program.
-5. Test each available menu option.
+5. Test the expected functionality.
 
 ---
 
-## Using `g++`
+## Module 02 with `g++`
 
-The application can also be compiled from a terminal.
+Compile:
 
 ```bash
 g++ inventory_manager.cpp -o inventory_manager
@@ -545,7 +716,29 @@ inventory_manager.exe
 ./inventory_manager
 ```
 
-Module-specific instructions can be found inside each module's README.
+---
+
+## Module 03 with `g++`
+
+Compile:
+
+```bash
+g++ inventory_welcome.cpp -o inventory_welcome
+```
+
+### Windows
+
+```bash
+inventory_welcome.exe
+```
+
+### Linux / macOS
+
+```bash
+./inventory_welcome
+```
+
+Module-specific instructions can also be found inside each module's README.
 
 ---
 
@@ -574,6 +767,7 @@ progression from fundamental C++ concepts to a more complete application.
 
 The finished project should demonstrate:
 
+- C++ fundamentals
 - Program organization
 - Application design
 - Version control
@@ -582,6 +776,10 @@ The finished project should demonstrate:
 - Documentation
 - Problem solving
 - Code improvement over time
+- Data management
+- Object-oriented programming
+- Persistent storage
+- More advanced application concepts
 
 The repository will also serve as a record of my development progress and
 as part of my programming portfolio.
@@ -594,9 +792,13 @@ as part of my programming portfolio.
 Project:       Inventory Manager
 Language:      C++
 Developer:     John Saldivar
+
 Module 01:     Complete
 Module 02:     Complete
-Modules Done:  2 / 15
+Module 03:     Complete
+
+Modules Done:  3 / 15
+Latest Module: Module 03
 Repository:    Public
 Development:   Active
 ```
@@ -617,6 +819,7 @@ Development:   Active
 
 - ✅ [Module 01 — Development Environment Setup](./Module01-Setup/)
 - ✅ [Module 02 — Menus, Switch Case & Application Flow](./Module02-Variables/)
+- ✅ [Module 03 — Variables, Cin & Cout](./Module03-Datasets-Arrays-Pointers/)
 
 ---
 
@@ -629,7 +832,8 @@ Development:   Active
 **John Saldivar**
 
 ![C++](https://img.shields.io/badge/C%2B%2B-Application%20Development-00599C?style=for-the-badge&logo=cplusplus&logoColor=white)
-![Modules](https://img.shields.io/badge/Modules%20Completed-2%20of%2015-success?style=for-the-badge)
+![Modules](https://img.shields.io/badge/Modules%20Completed-3%20of%2015-success?style=for-the-badge)
+![Latest](https://img.shields.io/badge/Latest%20Module-03-blue?style=for-the-badge)
 ![GitHub](https://img.shields.io/badge/Version%20Control-GitHub-181717?style=for-the-badge&logo=github)
 
 **Build → Test → Improve → Connect**
