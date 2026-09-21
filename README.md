@@ -7,8 +7,8 @@
 
 ![C++](https://img.shields.io/badge/Language-C%2B%2B-00599C?style=for-the-badge&logo=cplusplus&logoColor=white)
 ![Project](https://img.shields.io/badge/Project-Inventory%20Manager-2ea44f?style=for-the-badge)
-![Module](https://img.shields.io/badge/Latest%20Module-03-blue?style=for-the-badge)
-![Progress](https://img.shields.io/badge/Progress-Module%2003%20Complete-success?style=for-the-badge)
+![Module](https://img.shields.io/badge/Latest%20Module-04-blue?style=for-the-badge)
+![Progress](https://img.shields.io/badge/Progress-Module%2004%20Complete-success?style=for-the-badge)
 ![GitHub](https://img.shields.io/badge/GitHub-johnsaldivar-181717?style=for-the-badge&logo=github)
 
 **Developed by [John Saldivar](https://github.com/johnsaldivar)**
@@ -72,9 +72,10 @@ The project is intended to demonstrate:
 - C++ fundamentals
 - Variables and data types
 - Console input and output
-- Application design
 - Menu-driven application flow
 - Functions
+- Arrays
+- Pointers
 - Data structures
 - Searching and algorithms
 - Object-oriented programming
@@ -84,6 +85,7 @@ The project is intended to demonstrate:
 - Security concepts
 - Database concepts
 - Artificial intelligence concepts
+- Real-world dataset integration
 - Version control using Git and GitHub
 
 ---
@@ -100,6 +102,7 @@ As the application develops, planned functionality includes:
 - 🔢 Track item quantities
 - 🏷️ Organize items by category
 - 💲 Store pricing information
+- 📊 Work with multiple inventory records
 - ✅ Validate user input
 - 💾 Save inventory data
 - 📂 Load previously stored inventory
@@ -109,8 +112,8 @@ As the application develops, planned functionality includes:
 - 🔐 Apply security concepts
 - 🤖 Explore AI-related functionality where appropriate
 
-Features will be added as the required programming concepts are introduced
-during the course.
+Features will continue to be added as new programming concepts are
+introduced throughout the course.
 
 ---
 
@@ -158,11 +161,14 @@ Future versions of the application will explore:
 
 ## Data & Systems
 
-The project may also incorporate:
+The project incorporates or may later incorporate:
 
 - Arrays
+- Pointers
+- Parallel arrays
 - Linked lists
 - Data structures
+- Public datasets
 - File access
 - Long-term data storage
 - Databases
@@ -179,6 +185,7 @@ Application-level concepts include:
 - User input
 - Console output
 - Input validation
+- Dataset integration
 - Searching
 - Algorithms
 - Record management
@@ -230,6 +237,9 @@ CPlusPlus-Application-Design/
 │   └── inventory_welcome.cpp
 │
 ├── Module04-Functions-Headers/
+│   ├── README.md
+│   └── inventory_dataset.cpp
+│
 ├── Module05-Classes-Objects/
 ├── Module06-Records-Storage/
 ├── Module07-Security-Search/
@@ -256,7 +266,7 @@ CPlusPlus-Application-Design/
 | 01 | [Development Environment & GitHub](./Module01-Setup/) | ✅ Complete |
 | 02 | [Menus, Switch Case & Application Flow](./Module02-Variables/) | ✅ Complete |
 | 03 | [Variables, Cin & Cout](./Module03-Datasets-Arrays-Pointers/) | ✅ Complete |
-| 04 | Functions & Headers | ⏳ Upcoming |
+| 04 | [Datasets, Arrays & Pointers](./Module04-Functions-Headers/) | ✅ Complete |
 | 05 | Classes & Objects | ⏳ Upcoming |
 | 06 | Records & Storage | ⏳ Upcoming |
 | 07 | Security & Search | ⏳ Upcoming |
@@ -437,80 +447,237 @@ The completed program uses:
 
 ---
 
+## Module 04 — Datasets, Arrays & Pointers
+
+Module 4 introduced working with multiple records instead of individual
+values.
+
+For this assignment, a small portion of a public supermarket sales dataset
+was selected and represented inside the Inventory Manager using C++ arrays.
+
+The application stores three related fields:
+
+- Product Line
+- Unit Price
+- Quantity
+
+Seven records were selected and stored using parallel arrays.
+
+---
+
+### Dataset Source
+
+A public **Supermarket Sales Dataset** from Kaggle was used for this
+assignment.
+
+[View the dataset on Kaggle](https://www.kaggle.com/datasets/faresashraf1001/supermarket-sales)
+
+A simplified selection of the dataset was brought into C++ rather than
+loading the entire dataset.
+
+---
+
+### Selected Records
+
+| Record | Product Line | Unit Price | Quantity |
+|:---:|---|---:|---:|
+| 1 | Health and beauty | $74.69 | 7 |
+| 2 | Electronic accessories | $15.28 | 5 |
+| 3 | Home and lifestyle | $46.33 | 7 |
+| 4 | Health and beauty | $58.22 | 8 |
+| 5 | Sports and travel | $86.31 | 7 |
+| 6 | Electronic accessories | $85.39 | 7 |
+| 7 | Electronic accessories | $68.84 | 6 |
+
+---
+
+### Arrays Used
+
+The selected dataset values are represented using three parallel arrays:
+
+```cpp
+string productLines[RECORD_COUNT];
+double unitPrices[RECORD_COUNT];
+int quantities[RECORD_COUNT];
+```
+
+Each position across the arrays represents one simplified record.
+
+For example:
+
+```text
+Index 0
+
+Product Line: Health and beauty
+Unit Price:   74.69
+Quantity:     7
+```
+
+---
+
+### Pointer Demonstration
+
+Module 4 also introduced pointers.
+
+A pointer was created that references the first value in the
+`unitPrices` array.
+
+```cpp
+double* pricePtr = &unitPrices[0];
+```
+
+The value at that address can then be accessed by dereferencing the
+pointer:
+
+```cpp
+*pricePtr
+```
+
+Both:
+
+```cpp
+unitPrices[0]
+```
+
+and:
+
+```cpp
+*pricePtr
+```
+
+return:
+
+```text
+74.69
+```
+
+This demonstrates how C++ can access a value through its memory address.
+
+---
+
+### Module 04 Output
+
+```text
+===============================================
+       INVENTORY MANAGER - DATASET VIEW
+===============================================
+Record  Product Line                Unit Price    Quantity
+-----------------------------------------------
+1       Health and beauty           $74.69        7
+2       Electronic accessories      $15.28        5
+3       Home and lifestyle          $46.33        7
+4       Health and beauty           $58.22        8
+5       Sports and travel           $86.31        7
+6       Electronic accessories      $85.39        7
+7       Electronic accessories      $68.84        6
+
+--- Pointer Demonstration ---
+First unit price normally: $74.69
+First unit price through pointer: $74.69
+```
+
+---
+
+### Completed
+
+- [x] Public Kaggle dataset selected
+- [x] Dataset fields inspected
+- [x] Seven records selected
+- [x] Three fields selected
+- [x] Product Line array created
+- [x] Unit Price array created
+- [x] Quantity array created
+- [x] Loop used to display records
+- [x] Pointer created
+- [x] Pointer connected to an array value
+- [x] Array value accessed through pointer dereferencing
+- [x] Dataset connected to Inventory Manager
+- [x] Program compiled successfully
+- [x] Program tested successfully
+- [x] Module 4 files uploaded to GitHub
+- [x] Module 4 completed
+
+➡️ **[View Module 04](./Module04-Functions-Headers/)**
+
+---
+
 # 🧩 Current Application Architecture
 
-After three modules, the Inventory Manager has several important
+After four modules, the Inventory Manager now has several important
 foundations.
 
 ```text
-                  INVENTORY MANAGER
-                         │
-          ┌──────────────┼──────────────┐
-          │              │              │
-          ▼              ▼              ▼
- Development         Application      Application
- Environment            Flow             Data
-  Module 01           Module 02         Module 03
-          │              │              │
-          ▼              ▼              ▼
-       GitHub           Menu          Variables
-       Setup            Loop          Strings
-       Testing       Switch/Case      Numbers
-       Commits        Functions       Status Values
-          │              │              │
-          └──────────────┼──────────────┘
-                         │
-                         ▼
-                  Future Features
+                       INVENTORY MANAGER
+                              │
+        ┌─────────────────────┼─────────────────────┐
+        │                     │                     │
+        ▼                     ▼                     ▼
+ Development             Application            Application
+ Environment                Flow                   Data
+  Module 01               Module 02              Module 03
+        │                     │                     │
+        ▼                     ▼                     ▼
+      GitHub                 Menu                Variables
+      Setup                  Loop                Strings
+      Testing            Switch / Case           Numbers
+      Commits              Functions          Status Values
+        │                     │                     │
+        └──────────────┬──────┴──────────────┬─────┘
+                       │                     │
+                       ▼                     ▼
+               Collections of Data      Memory Access
+                    Module 04              Module 04
+                       │                     │
+                       ▼                     ▼
+                     Arrays               Pointers
+                Multiple Records       Memory Addresses
+                       │                     │
+                       └──────────┬──────────┘
+                                  │
+                                  ▼
+                           Future Features
 ```
 
 Module 1 established the development environment.
 
 Module 2 established how users navigate the application.
 
-Module 3 introduced the information that the application needs to store
-and display.
+Module 3 introduced individual application values and data types.
 
-Future modules will continue connecting these concepts together.
+Module 4 introduced collections of records using arrays and demonstrated
+how values can be accessed through pointers.
 
 ---
 
-# 🔗 How Variables Connect to the Project
+# 🔗 Data Progression
 
-Variables are the foundation of the information that the Inventory Manager
-will eventually store.
+The Inventory Manager is gradually moving from individual values toward
+structured application data.
 
 ```text
 Variable
    │
    ▼
-Data
+Array
    │
    ▼
-Inventory Record
+Multiple Records
    │
    ▼
-Object / Class
+Data Structure
    │
    ▼
-File or Database
+Class / Object
    │
    ▼
-Application Feature
+File / Database
+   │
+   ▼
+Complete Application
 ```
 
-Future inventory records may contain information such as:
-
-```text
-Item ID
-Item Name
-Category
-Quantity
-Price
-Availability
-```
-
-Each piece of information begins as a variable.
+This progression allows the project to evolve naturally as more advanced
+C++ concepts are introduced.
 
 ---
 
@@ -532,13 +699,11 @@ Module 03
 Variables, Cin & Cout
         │
         ▼
+Module 04
+Datasets, Arrays & Pointers
+        │
+        ▼
 Future Modules
-Application Data & Features
-        │
-        ▼
-Arrays / Data Structures
-        │
-        ▼
 Functions & Program Organization
         │
         ▼
@@ -629,6 +794,8 @@ Testing may include:
 - Menu navigation
 - Expected program output
 - Data display
+- Array indexing
+- Pointer access
 - Exit behavior
 - Compilation errors
 - Runtime errors
@@ -679,6 +846,25 @@ displayed all seven variables, including:
 - Application-ready state
 
 The program completed normally without errors.
+
+---
+
+## Module 04 Testing
+
+Module 4 was compiled and tested successfully.
+
+Testing verified that:
+
+- All seven dataset records display
+- Product lines match the correct prices
+- Product lines match the correct quantities
+- Prices display correctly
+- The loop processes all records
+- The pointer references the first price
+- Dereferencing the pointer returns `74.69`
+- The application exits normally
+- No compilation errors occur
+- No runtime errors occur
 
 ---
 
@@ -738,6 +924,28 @@ inventory_welcome.exe
 ./inventory_welcome
 ```
 
+---
+
+## Module 04 with `g++`
+
+Compile:
+
+```bash
+g++ inventory_dataset.cpp -o inventory_dataset
+```
+
+### Windows
+
+```bash
+inventory_dataset.exe
+```
+
+### Linux / macOS
+
+```bash
+./inventory_dataset
+```
+
 Module-specific instructions can also be found inside each module's README.
 
 ---
@@ -776,6 +984,10 @@ The finished project should demonstrate:
 - Documentation
 - Problem solving
 - Code improvement over time
+- Variables and data types
+- Collections of data
+- Arrays
+- Pointer fundamentals
 - Data management
 - Object-oriented programming
 - Persistent storage
@@ -796,9 +1008,10 @@ Developer:     John Saldivar
 Module 01:     Complete
 Module 02:     Complete
 Module 03:     Complete
+Module 04:     Complete
 
-Modules Done:  3 / 15
-Latest Module: Module 03
+Modules Done:  4 / 15
+Latest Module: Module 04
 Repository:    Public
 Development:   Active
 ```
@@ -820,6 +1033,7 @@ Development:   Active
 - ✅ [Module 01 — Development Environment Setup](./Module01-Setup/)
 - ✅ [Module 02 — Menus, Switch Case & Application Flow](./Module02-Variables/)
 - ✅ [Module 03 — Variables, Cin & Cout](./Module03-Datasets-Arrays-Pointers/)
+- ✅ [Module 04 — Datasets, Arrays & Pointers](./Module04-Functions-Headers/)
 
 ---
 
@@ -832,8 +1046,8 @@ Development:   Active
 **John Saldivar**
 
 ![C++](https://img.shields.io/badge/C%2B%2B-Application%20Development-00599C?style=for-the-badge&logo=cplusplus&logoColor=white)
-![Modules](https://img.shields.io/badge/Modules%20Completed-3%20of%2015-success?style=for-the-badge)
-![Latest](https://img.shields.io/badge/Latest%20Module-03-blue?style=for-the-badge)
+![Modules](https://img.shields.io/badge/Modules%20Completed-4%20of%2015-success?style=for-the-badge)
+![Latest](https://img.shields.io/badge/Latest%20Module-04-blue?style=for-the-badge)
 ![GitHub](https://img.shields.io/badge/Version%20Control-GitHub-181717?style=for-the-badge&logo=github)
 
 **Build → Test → Improve → Connect**
