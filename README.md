@@ -10,6 +10,7 @@
 ![Module](https://img.shields.io/badge/Latest%20Module-05-blue?style=for-the-badge)
 ![Progress](https://img.shields.io/badge/Progress-Module%2005%20Complete-success?style=for-the-badge)
 ![Modules](https://img.shields.io/badge/Modules%20Completed-5%20of%2015-success?style=for-the-badge)
+![Revision](https://img.shields.io/badge/Module%2004-Revised-orange?style=for-the-badge)
 ![GitHub](https://img.shields.io/badge/GitHub-johnsaldivar-181717?style=for-the-badge&logo=github)
 
 **Developed by [John Saldivar](https://github.com/johnsaldivar)**
@@ -56,21 +57,11 @@ The project begins with fundamental C++ concepts and continues to grow
 into a more organized and functional application as new topics are
 introduced throughout the course.
 
-The goal is to eventually provide a system where users can:
+The goal is to eventually provide a system where users can add, view,
+search, update, remove, organize, calculate, and permanently store
+inventory information.
 
-- Add inventory items
-- View stored records
-- Search inventory
-- Update existing records
-- Remove records
-- Calculate inventory information
-- Organize inventory data
-- Save and load information
-- Work with more advanced data structures
-- Use object-oriented programming
-- Explore database and AI-related concepts
-
-Each course module adds another layer to the application.
+Each module adds another layer to the application.
 
 ---
 
@@ -88,6 +79,8 @@ The project is intended to demonstrate:
 - Functions
 - Arrays
 - Pointers
+- External datasets
+- CSV file input
 - Records
 - Header files
 - Multi-file application design
@@ -100,7 +93,6 @@ The project is intended to demonstrate:
 - Security concepts
 - Database concepts
 - Artificial intelligence concepts
-- Real-world dataset integration
 - Version control using Git and GitHub
 
 ---
@@ -119,6 +111,8 @@ As the application develops, planned functionality includes:
 - 💲 Store pricing information
 - 🧮 Calculate total inventory value
 - 📊 Work with multiple inventory records
+- 🌐 Import information from external datasets
+- 📄 Read data from CSV files
 - ✅ Validate user input
 - 💾 Save inventory data
 - 📂 Load previously stored inventory
@@ -127,9 +121,6 @@ As the application develops, planned functionality includes:
 - 🗃️ Explore database-backed storage
 - 🔐 Apply security concepts
 - 🤖 Explore AI-related functionality where appropriate
-
-Features will continue to be added as new programming concepts are
-introduced throughout the course.
 
 ---
 
@@ -150,18 +141,33 @@ Concepts introduced or planned throughout the course include:
 - `bool`
 - `cin`
 - `cout`
-- Console input and output
 - Conditional logic
 - `switch/case`
 - Loops
 - Functions
 - Arrays
 - Pointers
-- Records
 - Structures
 - Header files
-- Function declarations
-- Function implementations
+
+---
+
+## Data & File Processing
+
+The Inventory Manager now includes experience with:
+
+- Arrays
+- Parallel arrays
+- Pointer access
+- Memory addresses
+- External datasets
+- Kaggle datasets
+- CSV files
+- `ifstream`
+- `getline()`
+- String parsing
+- Numeric conversion using `stoi()` and `stod()`
+- Inventory records
 
 ---
 
@@ -169,13 +175,12 @@ Concepts introduced or planned throughout the course include:
 
 The application now includes concepts such as:
 
-- Function prototypes
 - Function declarations
 - Function implementations
 - User-defined header files
 - Header guards
 - Multiple `.cpp` files
-- Reusable application components
+- Reusable components
 - Separation of responsibilities
 
 ---
@@ -195,49 +200,9 @@ Future versions of the application will explore:
 
 ---
 
-## Data & Systems
-
-The project incorporates or may later incorporate:
-
-- Variables
-- Arrays
-- Parallel arrays
-- Records
-- Pointers
-- Memory addresses
-- Linked lists
-- Data structures
-- Public datasets
-- File access
-- Long-term data storage
-- Databases
-- Memory management
-
----
-
-## Application Development
-
-Application-level concepts include:
-
-- Menu design
-- Application flow
-- User input
-- Console output
-- Input validation
-- Dataset integration
-- Record management
-- Searching
-- Algorithms
-- Calculations
-- Error handling
-- Security concepts
-- Artificial intelligence concepts
-
----
-
 ## Developer Workflow
 
-This repository also documents the software development workflow used
+This repository documents the software development workflow used
 throughout the course:
 
 - Git
@@ -250,6 +215,7 @@ throughout the course:
 - Compilation
 - Testing
 - Debugging
+- Revision
 - Documentation
 - Project organization
 - Public portfolio development
@@ -280,7 +246,9 @@ CPlusPlus-Application-Design/
 │
 ├── Module04-Functions-Headers/
 │   ├── README.md
-│   └── inventory_dataset.cpp
+│   ├── inventory_dataset.cpp
+│   └── data/
+│       └── SuperMarket Analysis.csv
 │
 ├── Module05-Classes-Objects/
 │   ├── README.md
@@ -313,7 +281,7 @@ CPlusPlus-Application-Design/
 | 01 | [Development Environment & GitHub](./Module01-Setup/) | ✅ Complete |
 | 02 | [Menus, Switch Case & Application Flow](./Module02-Variables/) | ✅ Complete |
 | 03 | [Variables, Cin & Cout](./Module03-Datasets-Arrays-Pointers/) | ✅ Complete |
-| 04 | [Datasets, Arrays & Pointers](./Module04-Functions-Headers/) | ✅ Complete |
+| 04 | [Datasets, Arrays & Pointers](./Module04-Functions-Headers/) | 🔄 Revised / Resubmitted |
 | 05 | [Records, Headers & Functions](./Module05-Classes-Objects/) | ✅ Complete |
 | 06 | Records & Storage | ⏳ Upcoming |
 | 07 | Security & Search | ⏳ Upcoming |
@@ -328,24 +296,23 @@ CPlusPlus-Application-Design/
 
 ---
 
-# ✅ Completed Modules
+# ✅ Completed & Revised Modules
 
 ## Module 01 — Development Environment Setup
 
-Module 1 established the development environment and GitHub workflow
-used throughout the course.
+Module 1 established the development environment and GitHub workflow used
+throughout the course.
 
 ### Completed
 
-- [x] Created a public GitHub repository
-- [x] Added a repository README
-- [x] Organized the repository into module directories
-- [x] Prepared a C++ development environment
-- [x] Created an original C++ test program
-- [x] Successfully compiled the program
-- [x] Successfully tested the program
-- [x] Practiced GitHub commits
-- [x] Verified public repository accessibility
+- [x] Public GitHub repository created
+- [x] C++ development environment prepared
+- [x] Repository organized into module directories
+- [x] Original C++ test program created
+- [x] Program compiled successfully
+- [x] Program tested successfully
+- [x] GitHub workflow practiced
+- [x] Repository accessibility verified
 
 ➡️ **[View Module 01](./Module01-Setup/)**
 
@@ -353,48 +320,36 @@ used throughout the course.
 
 ## Module 02 — Menus, Switch Case & Application Flow
 
-Module 2 established the main navigation structure for the
-**Inventory Manager**.
+Module 2 established the main navigation structure for the Inventory
+Manager.
 
 The application introduced:
 
-- A command-line menu
-- `switch/case`
-- Loops
-- Functions
-- Input validation
-- Application flow
-
-### Inventory Manager Menu
-
 ```text
-========================================
-         INVENTORY MANAGER
-========================================
-1. Add Item
-2. View Inventory
-3. Search Inventory
-4. Update Item
-5. Remove Item
-6. Exit
-========================================
-Select an option:
+Menu
+  ↓
+User Choice
+  ↓
+Input Validation
+  ↓
+switch/case
+  ↓
+Function
+  ↓
+Return to Menu
 ```
 
 ### Completed
 
-- [x] Main menu designed
-- [x] At least five options included
-- [x] Exit option included
+- [x] Command-line menu created
+- [x] At least five menu options included
+- [x] Loop implemented
 - [x] `switch/case` implemented
-- [x] Menu loop implemented
 - [x] Separate functions created
 - [x] Invalid numeric input handled
 - [x] Invalid nonnumeric input handled
 - [x] Program compiled successfully
 - [x] Program tested successfully
-- [x] Module files uploaded
-- [x] Module completed
 
 ➡️ **[View Module 02](./Module02-Variables/)**
 
@@ -404,20 +359,18 @@ Select an option:
 
 Module 3 introduced variables and fundamental C++ data types.
 
-The Inventory Manager was expanded with a personalized welcome screen
+The Inventory Manager was expanded with a personalized welcome program
 that stores and displays application information.
 
-### Variables Used
+### Data Types Used
 
-| Variable | Data Type | Purpose |
-|---|---|---|
-| `userName` | `string` | Stores the user's name |
-| `applicationName` | `string` | Stores the application name |
-| `versionNumber` | `double` | Stores the version number |
-| `currentItemCount` | `int` | Stores inventory count |
-| `sampleItemPrice` | `double` | Stores a sample price |
-| `inventoryStatus` | `char` | Stores a status code |
-| `applicationReady` | `bool` | Stores application readiness |
+```text
+string
+int
+double
+char
+bool
+```
 
 The completed program uses:
 
@@ -429,43 +382,113 @@ The completed program uses:
 ### Completed
 
 - [x] Personalized welcome screen created
-- [x] User name stored in a variable
-- [x] Application name stored in a variable
-- [x] Version number stored
+- [x] User input captured
+- [x] Application information stored in variables
 - [x] At least six variables created
-- [x] At least four C++ data types used
-- [x] `string` used
-- [x] `int` used
-- [x] `double` used
-- [x] `char` used
-- [x] `bool` used
-- [x] `cin` / console input used
-- [x] `cout` used
+- [x] At least four data types used
+- [x] Every variable displayed
 - [x] Program compiled successfully
 - [x] Program tested successfully
-- [x] Module files uploaded
-- [x] Module completed
 
 ➡️ **[View Module 03](./Module03-Datasets-Arrays-Pointers/)**
 
 ---
 
-## Module 04 — Datasets, Arrays & Pointers
+# 🔄 Module 04 — Datasets, Arrays & Pointers
 
 Module 4 introduced working with collections of real-world data.
 
-A small portion of a public supermarket sales dataset was represented
-inside the Inventory Manager using C++ arrays.
+For this assignment, a public **Supermarket Sales Dataset** was downloaded
+from Kaggle.
 
-### Dataset Fields
+The original Kaggle CSV is included in the repository at:
 
-- Product Line
-- Unit Price
-- Quantity
+```text
+Module04-Functions-Headers/data/SuperMarket Analysis.csv
+```
 
-Seven records were stored using parallel arrays.
+The revised C++ program now opens the actual downloaded CSV file rather
+than manually hard-coding the selected dataset values.
 
-### Arrays Used
+---
+
+## 🌐 Kaggle Dataset Workflow
+
+The revised implementation follows this process:
+
+```text
+Kaggle
+   │
+   ▼
+Download Dataset
+   │
+   ▼
+SuperMarket Analysis.csv
+   │
+   ▼
+C++ opens CSV
+   │
+   ▼
+Read Records
+   │
+   ▼
+Select Fields
+   │
+   ▼
+Store in Arrays
+   │
+   ▼
+Display Records
+   │
+   ▼
+Pointer Demonstration
+```
+
+---
+
+## 📊 Dataset Fields Used
+
+Three fields are loaded from the downloaded dataset:
+
+| Field | C++ Type |
+|---|---|
+| Product line | `string` |
+| Unit price | `double` |
+| Quantity | `int` |
+
+Seven records are read from the CSV.
+
+---
+
+## 📂 CSV File Input
+
+The revised program explicitly opens the downloaded Kaggle file:
+
+```cpp
+ifstream datasetFile("data/SuperMarket Analysis.csv");
+```
+
+The header row is skipped:
+
+```cpp
+getline(datasetFile, line);
+```
+
+and records are read directly from the file:
+
+```cpp
+while (recordCount < RECORD_COUNT &&
+       getline(datasetFile, line))
+{
+    // Parse CSV record
+}
+```
+
+---
+
+## 📦 Loading Dataset Values into Arrays
+
+The selected values are placed into arrays.
 
 ```cpp
 string productLines[RECORD_COUNT];
@@ -473,9 +496,23 @@ double unitPrices[RECORD_COUNT];
 int quantities[RECORD_COUNT];
 ```
 
-### Pointer Demonstration
+The CSV values are then loaded using:
 
-A pointer was created to reference the first value in the price array.
+```cpp
+getline(row, productLines[recordCount], ',');
+
+getline(row, field, ',');
+unitPrices[recordCount] = stod(field);
+
+getline(row, field, ',');
+quantities[recordCount] = stoi(field);
+```
+
+---
+
+## 👉 Pointer Demonstration
+
+A pointer references the first price in the array:
 
 ```cpp
 double* pricePtr = &unitPrices[0];
@@ -493,41 +530,48 @@ returns the same value as:
 unitPrices[0]
 ```
 
-### Completed
+---
 
-- [x] Public dataset selected
-- [x] Dataset fields inspected
-- [x] Seven records selected
-- [x] Three fields selected
-- [x] Arrays created
-- [x] Loop used to display records
-- [x] Pointer created
-- [x] Pointer connected to array data
-- [x] Pointer dereferencing demonstrated
-- [x] Program compiled successfully
-- [x] Program tested successfully
-- [x] Module files uploaded
-- [x] Module completed
+## 🔧 Revision After Instructor Feedback
 
-➡️ **[View Module 04](./Module04-Functions-Headers/)**
+The original Module 4 submission demonstrated arrays and pointers using
+values selected from the Kaggle dataset.
+
+After instructor feedback, Module 4 was revised to make the external
+dataset requirement explicit.
+
+The revised submission now:
+
+1. Includes the original Kaggle CSV.
+2. Opens the downloaded CSV directly from C++.
+3. Reads records from the actual dataset.
+4. Extracts Product Line, Unit Price, and Quantity.
+5. Stores those values in arrays.
+6. Displays the records with a loop.
+7. Demonstrates pointer access to an array value.
+8. Documents the Kaggle source inside the Module 4 README.
+
+### Revision Status
+
+```text
+Original Grade:      2 / 10
+Reason:              Kaggle dataset requirement was not clearly demonstrated
+Revision:            Completed
+CSV Added:           Yes
+C++ Reads CSV:       Yes
+Arrays:              Yes
+Pointer Demo:        Yes
+Resubmission:        Prepared
+```
+
+➡️ **[View Revised Module 04](./Module04-Functions-Headers/)**
 
 ---
 
 ## Module 05 — Records, Headers & Functions
 
-Module 5 represents a major organizational step for the
-**Inventory Manager**.
-
-The application now works with actual inventory records and separates
-program functionality into multiple C++ files.
-
-Instead of placing all application logic inside `main.cpp`, reusable
-inventory functions are declared in a custom header file and implemented
-inside a separate source file.
-
----
-
-### 📦 Inventory Record
+Module 5 expanded the Inventory Manager into a multi-file C++
+application.
 
 Each inventory item is represented using:
 
@@ -540,21 +584,19 @@ struct InventoryRecord
 };
 ```
 
-Each inventory record contains:
+The module separates declarations and implementations using:
 
-| Field | Data Type | Purpose |
-|---|---|---|
-| `itemName` | `string` | Stores the inventory item name |
-| `quantity` | `int` | Stores the number of units |
-| `price` | `double` | Stores the price per unit |
+```text
+main.cpp
+InventoryTools.h
+InventoryTools.cpp
+```
 
 ---
 
-### 🧠 Inventory Functions
+## 🧠 Module 05 Functions
 
-Three main inventory functions were created.
-
-#### Add a Record
+### Add Record
 
 ```cpp
 void addRecord(
@@ -564,11 +606,7 @@ void addRecord(
 );
 ```
 
-Allows a new inventory record to be entered.
-
----
-
-#### Display Records
+### Display Records
 
 ```cpp
 void displayRecords(
@@ -577,11 +615,7 @@ void displayRecords(
 );
 ```
 
-Displays all inventory records currently stored in the application.
-
----
-
-#### Calculate Total Inventory Value
+### Calculate Inventory Value
 
 ```cpp
 double calculateInventoryValue(
@@ -590,181 +624,42 @@ double calculateInventoryValue(
 );
 ```
 
-Calculates the total monetary value of all inventory records.
-
-The calculation is:
-
-```text
-Quantity × Price = Item Value
-```
-
-All item values are then added together.
-
 ---
 
-### 🧮 Example Calculation
+## 📄 Custom Header
 
-```text
-Brake Pads
-5 × $39.99 = $199.95
+The project now uses:
 
-Oil Filter
-10 × $8.99 = $89.90
-
-Total Inventory Value = $289.85
+```cpp
+#include "InventoryTools.h"
 ```
 
----
-
-### 📄 User-Defined Header
-
-Module 5 introduced the custom header:
-
-```text
-InventoryTools.h
-```
-
-The header contains the inventory record definition and function
+The custom header contains the record definition and function
 declarations.
 
-Example:
-
-```cpp
-#ifndef INVENTORYTOOLS_H
-#define INVENTORYTOOLS_H
-
-#include <string>
-
-struct InventoryRecord
-{
-    std::string itemName;
-    int quantity;
-    double price;
-};
-
-void addRecord(
-    InventoryRecord records[],
-    int& recordCount,
-    int maxRecords
-);
-
-void displayRecords(
-    const InventoryRecord records[],
-    int recordCount
-);
-
-double calculateInventoryValue(
-    const InventoryRecord records[],
-    int recordCount
-);
-
-#endif
-```
-
----
-
-### 🔧 Function Implementation
-
-The actual function logic is stored inside:
+The function implementations are stored inside:
 
 ```text
 InventoryTools.cpp
 ```
 
-This file includes the custom header:
-
-```cpp
-#include "InventoryTools.h"
-```
-
-The separation between declarations and implementations makes the
-Inventory Manager easier to maintain as it becomes larger.
-
 ---
 
-### 📚 Standard vs User-Defined Headers
-
-The project uses C++ standard-library headers such as:
-
-```cpp
-#include <iostream>
-#include <iomanip>
-#include <string>
-#include <limits>
-```
-
-It also uses the custom project header:
-
-```cpp
-#include "InventoryTools.h"
-```
-
-Standard-library headers provide functionality from C++.
-
-The user-defined header provides functionality designed specifically for
-the Inventory Manager.
-
----
-
-### 🧱 Header Guards
-
-The custom header uses:
-
-```cpp
-#ifndef INVENTORYTOOLS_H
-#define INVENTORYTOOLS_H
-
-// declarations
-
-#endif
-```
-
-This prevents the header contents from being included more than once
-during compilation.
-
----
-
-### 🖥️ Module 05 Menu
-
-```text
-========================================
-            INVENTORY MANAGER
-========================================
-1. Add Inventory Record
-2. Display Inventory Records
-3. Calculate Total Inventory Value
-4. Exit
-========================================
-Select an option:
-```
-
----
-
-### 🗂️ Multi-File Architecture
-
-```text
-Module05-Classes-Objects/
-│
-├── README.md
-├── main.cpp
-├── InventoryTools.h
-└── InventoryTools.cpp
-```
-
-The responsibilities are separated as follows:
+## 🗂️ Module 05 Architecture
 
 ```text
 main.cpp
    │
-   ├── Application entry point
-   ├── Menu
-   └── Application flow
-
+   ├── Application Entry Point
+   └── Menu / Application Flow
+            │
+            ▼
 InventoryTools.h
    │
-   ├── InventoryRecord definition
-   └── Function declarations
-
+   ├── InventoryRecord
+   └── Function Declarations
+            │
+            ▼
 InventoryTools.cpp
    │
    ├── addRecord()
@@ -772,29 +667,19 @@ InventoryTools.cpp
    └── calculateInventoryValue()
 ```
 
----
-
 ### Completed
 
 - [x] Inventory record structure created
-- [x] Record contains name, quantity, and price
 - [x] Add-record function created
 - [x] Display-records function created
 - [x] Calculation function created
-- [x] Custom header file created
-- [x] Function declarations placed in header
-- [x] Functions implemented in separate `.cpp` file
-- [x] Header guards implemented
-- [x] Standard-library headers used
-- [x] User-defined header used
-- [x] Inventory array created
-- [x] Records passed to functions
-- [x] Calculation returns a result
-- [x] Multi-file application created
+- [x] Custom header created
+- [x] Header guards used
+- [x] Function declarations separated
+- [x] Function implementations separated
+- [x] Multi-file C++ program created
 - [x] Program compiled successfully
 - [x] Program tested successfully
-- [x] Module 5 files uploaded to GitHub
-- [x] Module 5 completed
 
 ➡️ **[View Module 05](./Module05-Classes-Objects/)**
 
@@ -802,60 +687,59 @@ InventoryTools.cpp
 
 # 🧩 Current Application Architecture
 
-After five modules, the Inventory Manager has progressed from a basic
-development environment into a multi-file application.
+After five modules, the Inventory Manager has developed several important
+layers.
 
 ```text
-                          INVENTORY MANAGER
-                                 │
-          ┌──────────────────────┼──────────────────────┐
-          │                      │                      │
-          ▼                      ▼                      ▼
-    Development             Application             Application
-    Environment                Flow                    Data
-     Module 01               Module 02               Module 03
-          │                      │                      │
-          ▼                      ▼                      ▼
-       GitHub                   Menu                 Variables
-       Setup                    Loop                 Strings
-       Testing              Switch / Case           Numbers
-       Commits                Functions            User Input
-          │                      │                      │
-          └───────────────┬──────┴──────────────┬─────┘
-                          │                     │
-                          ▼                     ▼
-                  Collections of Data      Memory Access
-                       Module 04              Module 04
-                          │                     │
-                          ▼                     ▼
-                        Arrays               Pointers
-                   Multiple Records      Memory Addresses
-                          │                     │
-                          └──────────┬──────────┘
-                                     │
-                                     ▼
-                              Program Structure
-                                Module 05
-                                     │
-                ┌────────────────────┼────────────────────┐
-                │                    │                    │
-                ▼                    ▼                    ▼
-             Records             Headers             Functions
-                │                    │                    │
-                └────────────────────┼────────────────────┘
-                                     │
-                                     ▼
-                              Multi-File Program
-                                     │
-                                     ▼
-                              Future Features
+                         INVENTORY MANAGER
+                                │
+        ┌───────────────────────┼───────────────────────┐
+        │                       │                       │
+        ▼                       ▼                       ▼
+ Development               Application               Data
+ Environment                  Flow
+ Module 01                  Module 02               Module 03
+        │                       │                       │
+        ▼                       ▼                       ▼
+      GitHub                  Menu                 Variables
+      Setup                   Loop                 Data Types
+      Testing              Switch/Case             User Input
+        │                       │                       │
+        └───────────────────────┼───────────────────────┘
+                                │
+                                ▼
+                       External / Multiple Data
+                              Module 04
+                                │
+                  ┌─────────────┼─────────────┐
+                  │             │             │
+                  ▼             ▼             ▼
+               Kaggle          Arrays       Pointers
+               Dataset          CSV         Memory
+                  │             │             │
+                  └─────────────┼─────────────┘
+                                │
+                                ▼
+                         Program Structure
+                              Module 05
+                                │
+                  ┌─────────────┼─────────────┐
+                  │             │             │
+                  ▼             ▼             ▼
+               Records       Headers       Functions
+                  │             │             │
+                  └─────────────┼─────────────┘
+                                │
+                                ▼
+                         Multi-File Program
+                                │
+                                ▼
+                         Future Development
 ```
 
 ---
 
 # 📈 Application Evolution
-
-The application has progressed through several development stages.
 
 ```text
 Module 01
@@ -867,113 +751,34 @@ Application Flow
         │
         ▼
 Module 03
-Individual Variables
+Variables & Data Types
         │
         ▼
 Module 04
-Collections of Data
+External Dataset
+CSV → Arrays → Pointers
         │
         ▼
 Module 05
-Records & Modular Code
-        │
-        ▼
-Future Modules
-More Advanced Application Design
-```
-
----
-
-# 🔗 Data Progression
-
-The Inventory Manager continues moving toward more structured data.
-
-```text
-Variable
-   │
-   ▼
-Array
-   │
-   ▼
-Multiple Values
-   │
-   ▼
-Inventory Record
-   │
-   ▼
+Records
+Headers
 Functions
-   │
-   ▼
-Reusable Components
-   │
-   ▼
-Classes / Objects
-   │
-   ▼
-File / Database
-   │
-   ▼
-Complete Application
-```
-
----
-
-# 🏗️ Application Development Roadmap
-
-```text
-Module 01
-Development Environment & GitHub
-        │
-        ▼
-Module 02
-Menus, Switch Case & Application Flow
-        │
-        ▼
-Module 03
-Variables, Cin & Cout
-        │
-        ▼
-Module 04
-Datasets, Arrays & Pointers
-        │
-        ▼
-Module 05
-Records, Headers & Functions
         │
         ▼
 Future Modules
-Classes & Objects
-        │
-        ▼
-Persistent Records
-        │
-        ▼
-Searching & Validation
-        │
-        ▼
-File Storage
-        │
-        ▼
-Database Concepts
-        │
-        ▼
-Security
-        │
-        ▼
-AI Concepts
-        │
-        ▼
-Final Inventory Manager
+Classes
+Storage
+Searching
+Validation
+Databases
+AI
 ```
-
-Each module builds upon concepts and functionality introduced in previous
-modules.
 
 ---
 
 # 🔄 Development Workflow
 
-The general workflow used throughout the project is:
+The development process used throughout the project is:
 
 ```text
 Plan
@@ -988,10 +793,13 @@ Compile
 Test
   │
   ▼
+Review
+  │
+  ▼
 Debug
   │
   ▼
-Improve
+Improve / Revise
   │
   ▼
 Commit
@@ -1014,8 +822,11 @@ git commit -m "Describe the changes made"
 git push
 ```
 
-Using GitHub allows each stage of the application's development to be
-recorded as the project evolves.
+For the Module 4 revision, an appropriate commit message is:
+
+```text
+Revise Module 4 to load actual Kaggle CSV dataset
+```
 
 ---
 
@@ -1023,78 +834,52 @@ recorded as the project evolves.
 
 Each module is tested before being considered complete.
 
-Testing may include:
+Testing includes:
 
-- Successful compilation
-- Valid user input
-- Invalid user input
-- Boundary values
-- Menu navigation
-- Expected program output
-- Data display
-- Array indexing
-- Pointer access
-- Record creation
-- Calculations
-- Multi-file compilation
-- Exit behavior
-- Compilation errors
-- Runtime errors
+```text
+Compilation
+User Input
+Expected Output
+Invalid Input
+Array Values
+CSV Loading
+Pointer Access
+Record Creation
+Calculations
+Multi-File Compilation
+Runtime Behavior
+```
 
 ---
 
-## Module 01 Testing
+## Module 04 Revision Testing
 
-The development environment test compiled and executed successfully,
-confirming that the C++ environment was configured correctly.
+The revised Module 4 program was tested to verify that:
 
----
-
-## Module 02 Testing
-
-Module 2 was tested using valid and invalid menu input.
-
-The application correctly handles invalid input and continues running
-until the user selects **Exit**.
-
----
-
-## Module 03 Testing
-
-Module 3 successfully accepted a full user name and correctly displayed
-all application variables.
-
----
-
-## Module 04 Testing
-
-Module 4 successfully displayed all selected dataset records.
-
-Testing also verified that pointer dereferencing correctly returned the
-first value in the price array.
+- `SuperMarket Analysis.csv` opens successfully
+- Seven records are loaded from the dataset
+- Product Line values are parsed correctly
+- Unit Price values are parsed correctly
+- Quantity values are parsed correctly
+- Values are stored in arrays
+- The loop displays every selected record
+- Pointer access returns the correct first price
+- No runtime errors occur
 
 ---
 
 ## Module 05 Testing
 
-Module 5 was compiled and tested successfully.
-
-Testing verified that the application can:
+Module 5 testing verified that the application can:
 
 - Start with an empty inventory
-- Display an empty inventory safely
-- Add multiple inventory records
-- Display stored records
-- Preserve item names
-- Preserve quantities
-- Preserve prices
+- Add multiple records
+- Display records
+- Preserve quantities and prices
 - Calculate total inventory value
-- Return the correct calculated result
-- Handle invalid menu numbers
-- Handle nonnumeric menu input
-- Return to the menu after each operation
+- Handle invalid menu input
+- Compile multiple `.cpp` files together
 - Exit normally
-- Compile correctly using multiple `.cpp` files
 
 ---
 
@@ -1102,63 +887,35 @@ Testing verified that the application can:
 
 The application requires a compatible C++ compiler.
 
-## Using Visual Studio
-
-1. Open the desired C++ project in Visual Studio.
-2. Make sure all required `.cpp` and `.h` files are included.
-3. Build the solution.
-4. Verify that the build completes successfully.
-5. Run the program.
-6. Test the expected functionality.
-
----
-
-## Module 02 with `g++`
+## Module 02
 
 ```bash
 g++ inventory_manager.cpp -o inventory_manager
 ```
 
----
-
-## Module 03 with `g++`
+## Module 03
 
 ```bash
 g++ inventory_welcome.cpp -o inventory_welcome
 ```
 
----
-
-## Module 04 with `g++`
+## Module 04
 
 ```bash
 g++ inventory_dataset.cpp -o inventory_dataset
 ```
 
----
+The Kaggle CSV must be available at:
 
-## Module 05 with `g++`
+```text
+data/SuperMarket Analysis.csv
+```
 
-Because Module 5 contains multiple implementation files, both `.cpp`
-files must be compiled together.
+## Module 05
 
 ```bash
 g++ main.cpp InventoryTools.cpp -o inventory_manager
 ```
-
-### Windows
-
-```bash
-inventory_manager.exe
-```
-
-### Linux / macOS
-
-```bash
-./inventory_manager
-```
-
-Module-specific instructions can also be found inside each module's README.
 
 ---
 
@@ -1168,15 +925,17 @@ This repository is public.
 
 Sensitive or private information should never be committed.
 
-Do **not** commit:
+Examples include:
 
-- Passwords
-- API keys
-- Access tokens
-- Private credentials
-- Database passwords
-- Authentication secrets
-- Personal or confidential information
+```text
+Passwords
+API Keys
+Access Tokens
+Private Credentials
+Database Passwords
+Authentication Secrets
+Confidential Information
+```
 
 ---
 
@@ -1185,32 +944,37 @@ Do **not** commit:
 By the end of the course, this repository should demonstrate the
 progression from fundamental C++ concepts to a more complete application.
 
-The finished project should demonstrate:
+The project now demonstrates:
 
-- C++ fundamentals
-- Program organization
-- Application design
-- Version control
-- Incremental development
-- Testing
-- Documentation
-- Problem solving
-- Code improvement over time
-- Variables and data types
-- Collections of data
-- Arrays
-- Pointers
-- Records
-- Functions
-- Header files
-- Modular application architecture
-- Data management
-- Object-oriented programming
-- Persistent storage
-- More advanced application concepts
+```text
+Development Environment
+        │
+        ▼
+Application Flow
+        │
+        ▼
+Variables
+        │
+        ▼
+Real-World Dataset
+        │
+        ▼
+CSV File Input
+        │
+        ▼
+Arrays & Pointers
+        │
+        ▼
+Records
+        │
+        ▼
+Headers & Functions
+        │
+        ▼
+Multi-File Application
+```
 
-The repository also serves as a record of my development progress and
-as part of my programming portfolio.
+Future modules will continue expanding this architecture.
 
 ---
 
@@ -1224,11 +988,19 @@ Developer:     John Saldivar
 Module 01:     Complete
 Module 02:     Complete
 Module 03:     Complete
-Module 04:     Complete
+Module 04:     Revised / Resubmitted
 Module 05:     Complete
 
 Modules Done:  5 / 15
 Latest Module: Module 05
+
+Module 04 Revision:
+Kaggle CSV:    Included
+CSV Parsing:   Implemented
+Arrays:        Implemented
+Pointers:      Implemented
+Status:        Awaiting Regrade
+
 Repository:    Public
 Development:   Active
 ```
@@ -1245,12 +1017,12 @@ Development:   Active
 
 [John Saldivar](https://github.com/johnsaldivar)
 
-### Completed Modules
+### Modules
 
 - ✅ [Module 01 — Development Environment Setup](./Module01-Setup/)
 - ✅ [Module 02 — Menus, Switch Case & Application Flow](./Module02-Variables/)
 - ✅ [Module 03 — Variables, Cin & Cout](./Module03-Datasets-Arrays-Pointers/)
-- ✅ [Module 04 — Datasets, Arrays & Pointers](./Module04-Functions-Headers/)
+- 🔄 [Module 04 — Datasets, Arrays & Pointers — Revised](./Module04-Functions-Headers/)
 - ✅ [Module 05 — Records, Headers & Functions](./Module05-Classes-Objects/)
 
 ---
@@ -1266,7 +1038,7 @@ Development:   Active
 ![C++](https://img.shields.io/badge/C%2B%2B-Application%20Development-00599C?style=for-the-badge&logo=cplusplus&logoColor=white)
 ![Modules](https://img.shields.io/badge/Modules%20Completed-5%20of%2015-success?style=for-the-badge)
 ![Latest](https://img.shields.io/badge/Latest%20Module-05-blue?style=for-the-badge)
-![Architecture](https://img.shields.io/badge/Architecture-Multi--File-2ea44f?style=for-the-badge)
+![Revision](https://img.shields.io/badge/Module%2004-Awaiting%20Regrade-orange?style=for-the-badge)
 ![GitHub](https://img.shields.io/badge/Version%20Control-GitHub-181717?style=for-the-badge&logo=github)
 
 **Build → Test → Improve → Connect**
