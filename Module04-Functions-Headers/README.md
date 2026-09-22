@@ -8,7 +8,7 @@
 [![Language](https://img.shields.io/badge/Language-C%2B%2B-00599C?style=for-the-badge&logo=cplusplus&logoColor=white)](https://isocpp.org/)
 [![Project](https://img.shields.io/badge/Project-Inventory%20Manager-2ea44f?style=for-the-badge)](#)
 [![Dataset](https://img.shields.io/badge/Dataset-Kaggle-20BEFF?style=for-the-badge&logo=kaggle&logoColor=white)](https://www.kaggle.com/datasets/faresashraf1001/supermarket-sales)
-[![Status](https://img.shields.io/badge/Status-Complete-success?style=for-the-badge)](#)
+[![Status](https://img.shields.io/badge/Status-Revised%20%26%20Complete-success?style=for-the-badge)](#)
 
 **Author:** [John Saldivar](https://github.com/johnsaldivar)
 
@@ -18,75 +18,85 @@
 
 ## 📖 Overview
 
-Module 4 introduces **datasets, arrays, loops, and pointers**.
+Module 4 focuses on **datasets, arrays, loops, and pointers**.
 
-For this assignment, I selected a public supermarket sales dataset from
-Kaggle and brought a simplified portion of the dataset into the
-**Inventory Manager** application.
+For this assignment, I downloaded a public supermarket sales dataset from
+**Kaggle** and included the original CSV file with this module.
 
-Instead of working with one value at a time, the application now works
-with collections of related values stored in C++ arrays.
+The C++ program opens the downloaded dataset, reads a simplified selection
+of records, stores selected fields in arrays, displays the records using a
+loop, and demonstrates accessing one of the array values through a pointer.
 
-The program also demonstrates how a pointer can be used to access a value
-stored in memory.
-
----
-
-## 🌐 Dataset Source
-
-The dataset used for this module is:
-
-### Supermarket Sales Dataset
-
-**Source:** Kaggle
-
-**Dataset Link:**  
-https://www.kaggle.com/datasets/faresashraf1001/supermarket-sales
-
-The original dataset contains supermarket transaction information.
-
-For this assignment, I selected three fields:
-
-- Product Line
-- Unit Price
-- Quantity
-
-I selected seven records from the dataset for the C++ demonstration.
+This module connects real-world external data to the **Inventory Manager**
+project.
 
 ---
 
-## 🎯 Module Objectives
+# 🌐 Kaggle Dataset
 
-This module demonstrates:
+The dataset used for this assignment was downloaded from Kaggle.
 
-- Working with a real-world public dataset
-- Inspecting fields within a dataset
-- Selecting a simplified subset of data
-- Creating C++ arrays
-- Storing multiple values inside arrays
-- Accessing array values by index
-- Iterating through arrays using a loop
-- Understanding basic pointer syntax
-- Accessing an array value through a pointer
-- Connecting external data to the Inventory Manager project
+### Dataset
+
+**Supermarket Sales Dataset**
+
+### Source
+
+[Kaggle — Supermarket Sales Dataset](https://www.kaggle.com/datasets/faresashraf1001/supermarket-sales)
+
+### Downloaded File
+
+```text
+SuperMarket Analysis.csv
+```
+
+The original downloaded CSV is included in this module under:
+
+```text
+data/SuperMarket Analysis.csv
+```
+
+The downloaded dataset contains approximately **1,000 transaction records**
+and multiple fields describing supermarket sales.
 
 ---
 
-# 📊 Selected Dataset Fields
+# 🎯 Assignment Requirements
 
-The simplified dataset uses three fields.
+The Module 4 assignment requires:
+
+- Selecting a small public Kaggle dataset
+- Choosing 5–10 records
+- Choosing at least 2–3 fields
+- Representing the selected data using C++ arrays
+- Displaying the records
+- Demonstrating access to one value through a pointer
+
+This implementation uses:
+
+```text
+Dataset: Supermarket Sales Dataset
+Records Selected: 7
+Fields Selected: 3
+```
+
+---
+
+# 📊 Fields Selected
+
+The following three fields were selected from the downloaded dataset:
 
 | Field | C++ Type | Purpose |
 |---|---|---|
-| Product Line | `string` | Category associated with the product |
-| Unit Price | `double` | Price per unit |
-| Quantity | `int` | Number of units purchased |
+| Product line | `string` | Stores the product category |
+| Unit price | `double` | Stores the price per unit |
+| Quantity | `int` | Stores the number of units purchased |
 
 ---
 
-# 📋 Selected Records
+# 📋 Records Used
 
-Seven records were selected from the dataset.
+The program loads the first seven records from the downloaded CSV.
 
 | Record | Product Line | Unit Price | Quantity |
 |:---:|---|---:|---:|
@@ -98,50 +108,47 @@ Seven records were selected from the dataset.
 | 6 | Electronic accessories | $85.39 | 7 |
 | 7 | Electronic accessories | $68.84 | 6 |
 
+These values are read directly from:
+
+```text
+data/SuperMarket Analysis.csv
+```
+
+rather than being manually entered into the C++ source code.
+
+---
+
+# 📂 Reading the Kaggle Dataset
+
+The C++ application opens the downloaded CSV using `ifstream`.
+
+```cpp
+ifstream datasetFile("data/SuperMarket Analysis.csv");
+```
+
+The program then skips the CSV header:
+
+```cpp
+getline(datasetFile, line);
+```
+
+and reads the selected records one line at a time.
+
+```cpp
+while (recordCount < RECORD_COUNT &&
+       getline(datasetFile, line))
+{
+    // Parse CSV data
+}
+```
+
+This demonstrates bringing external Kaggle data into a C++ application.
+
 ---
 
 # 🧠 Arrays
 
-An array allows several values of the same data type to be stored under
-one variable name.
-
-For example:
-
-```cpp
-double unitPrices[7] =
-{
-    74.69,
-    15.28,
-    46.33,
-    58.22,
-    86.31,
-    85.39,
-    68.84
-};
-```
-
-Instead of creating seven separate price variables, one array stores all
-seven prices.
-
-Each value can be accessed using an index.
-
-```cpp
-unitPrices[0]
-```
-
-returns:
-
-```text
-74.69
-```
-
-C++ array indexes begin at `0`.
-
----
-
-# 🔗 Parallel Arrays
-
-This assignment uses three arrays:
+Three arrays store the selected dataset fields.
 
 ```cpp
 string productLines[RECORD_COUNT];
@@ -149,27 +156,59 @@ double unitPrices[RECORD_COUNT];
 int quantities[RECORD_COUNT];
 ```
 
-The arrays work together using the same index.
+Each array uses the same index to represent one record.
 
 For example:
 
 ```text
 Index 0
-Product Line: Health and beauty
-Unit Price:   74.69
+
+Product line: Health and beauty
+Unit price:   74.69
 Quantity:     7
 ```
 
-The values at index `0` represent one simplified record.
+Together, the values at the same index represent one simplified
+supermarket record.
 
 ---
 
-# 🔁 Displaying the Dataset
+# 🔄 Loading CSV Values into Arrays
 
-A `for` loop displays each record.
+The program reads values from the Kaggle CSV and places them into the
+appropriate arrays.
+
+### Product Line
 
 ```cpp
-for (int i = 0; i < RECORD_COUNT; i++)
+getline(row, productLines[recordCount], ',');
+```
+
+### Unit Price
+
+```cpp
+getline(row, field, ',');
+unitPrices[recordCount] = stod(field);
+```
+
+### Quantity
+
+```cpp
+getline(row, field, ',');
+quantities[recordCount] = stoi(field);
+```
+
+The string values read from the CSV are converted into the appropriate C++
+data types where necessary.
+
+---
+
+# 🔁 Displaying the Records
+
+A `for` loop processes and displays every selected record.
+
+```cpp
+for (int i = 0; i < recordCount; i++)
 {
     cout << productLines[i] << endl;
     cout << unitPrices[i] << endl;
@@ -177,17 +216,16 @@ for (int i = 0; i < RECORD_COUNT; i++)
 }
 ```
 
-The loop allows the program to process all records without writing a
-separate `cout` statement for every item.
+Using a loop avoids writing separate output statements for every record.
 
 ---
 
-# 👉 Pointers
+# 👉 Pointer Demonstration
 
-A pointer stores a memory address.
+Module 4 also introduces pointers.
 
-For this assignment, a pointer is connected to the first value in the
-`unitPrices` array.
+A pointer is created that stores the memory address of the first value in
+the `unitPrices` array.
 
 ```cpp
 double* pricePtr = &unitPrices[0];
@@ -199,19 +237,17 @@ The `&` operator retrieves the memory address of:
 unitPrices[0]
 ```
 
-The pointer stores that address.
-
 ---
 
 ## Dereferencing the Pointer
 
-The value stored at that memory address can be accessed using:
+The value stored at the pointer's memory address is accessed using:
 
 ```cpp
 *pricePtr
 ```
 
-For this program:
+Therefore:
 
 ```cpp
 unitPrices[0]
@@ -229,24 +265,21 @@ both return:
 74.69
 ```
 
-This demonstrates how C++ can access data directly through a memory
-address.
+This demonstrates accessing an array value through a pointer.
 
 ---
 
-# 🖥️ Program Output
-
-The application displays the selected dataset records in a formatted
-table.
-
-Example:
+# 🖥️ Example Program Output
 
 ```text
-===============================================
-       INVENTORY MANAGER - DATASET VIEW
-===============================================
+======================================================
+          INVENTORY MANAGER - KAGGLE DATASET
+======================================================
+Source file: data/SuperMarket Analysis.csv
+Records loaded: 7
+
 Record  Product Line                Unit Price    Quantity
------------------------------------------------
+------------------------------------------------------
 1       Health and beauty           $74.69        7
 2       Electronic accessories      $15.28        5
 3       Home and lifestyle          $46.33        7
@@ -254,74 +287,83 @@ Record  Product Line                Unit Price    Quantity
 5       Sports and travel           $86.31        7
 6       Electronic accessories      $85.39        7
 7       Electronic accessories      $68.84        6
-```
 
-The program then demonstrates pointer access.
-
-```text
 --- Pointer Demonstration ---
-First unit price normally: $74.69
-First unit price through pointer: $74.69
+First unit price using array access: $74.69
+First unit price using pointer access: $74.69
+Pointer memory address: 0x...
+
+Dataset loaded and displayed successfully.
 ```
+
+> The exact pointer memory address will be different each time the program
+> runs.
 
 ---
 
 # 📦 Connection to the Inventory Manager
 
-Previous modules introduced individual variables and application flow.
+Previous modules worked primarily with individual values and program flow.
 
-Module 4 begins working with **collections of data**.
-
-The progression now looks like:
+Module 4 introduces working with **collections of external data**.
 
 ```text
-Variable
-    │
-    ▼
-Array
-    │
-    ▼
+Kaggle Dataset
+      │
+      ▼
+Downloaded CSV
+      │
+      ▼
+C++ File Input
+      │
+      ▼
+Selected Fields
+      │
+      ▼
+Arrays
+      │
+      ▼
 Multiple Records
-    │
-    ▼
-Data Structure
-    │
-    ▼
-Object / Class
-    │
-    ▼
-File / Database
-    │
-    ▼
+      │
+      ▼
+Pointer Access
+      │
+      ▼
 Inventory Manager
 ```
 
-Arrays provide an early way for the Inventory Manager to work with
-multiple records instead of only one item at a time.
+This is an important step toward building an application that can work
+with larger collections of real-world information.
 
 ---
 
-# 🧩 Application Progress
+# 🔗 Data Progression
+
+The Inventory Manager is gradually progressing toward more structured data.
 
 ```text
-Module 01
-Development Environment & GitHub
-        │
-        ▼
-Module 02
-Menus & Application Flow
-        │
-        ▼
-Module 03
-Variables, Cin & Cout
-        │
-        ▼
-Module 04
-Datasets, Arrays & Pointers
-        │
-        ▼
-Future Modules
-More Advanced Data Structures
+Variable
+   │
+   ▼
+External Dataset
+   │
+   ▼
+Array
+   │
+   ▼
+Multiple Records
+   │
+   ▼
+Record / Structure
+   │
+   ▼
+Class / Object
+   │
+   ▼
+File / Database
+   │
+   ▼
+Complete Application
 ```
 
 ---
@@ -330,27 +372,49 @@ More Advanced Data Structures
 
 ```text
 Module04-Functions-Headers/
+│
 ├── README.md
-└── inventory_dataset.cpp
+├── inventory_dataset.cpp
+│
+└── data/
+    └── SuperMarket Analysis.csv
 ```
 
-> **Note:** The module directory names were created during the initial
-> repository setup and are retained for organizational consistency.
+### `inventory_dataset.cpp`
+
+Opens the Kaggle dataset, loads selected records into arrays, displays the
+data, and demonstrates pointer access.
+
+### `data/SuperMarket Analysis.csv`
+
+The original dataset file downloaded from Kaggle.
+
+### `README.md`
+
+Documents the dataset source, assignment requirements, implementation,
+testing, and connection to the Inventory Manager.
+
+> **Note:** The module directory name was created during the initial
+> repository setup and is retained for organizational consistency.
 > The actual Module 4 assignment is **Datasets, Arrays & Pointers**.
 
 ---
 
 # 🧪 Testing
 
-The application should be tested to verify that:
+The revised Module 4 program was tested to confirm that:
 
-- All seven records appear
-- Each product line matches the correct price
-- Each product line matches the correct quantity
+- The downloaded Kaggle CSV opens successfully
+- The program reads records from the CSV
+- Seven records are loaded
+- Product Line values are read correctly
+- Unit Price values are read correctly
+- Quantity values are read correctly
+- Dataset values are stored in arrays
+- The loop displays all seven records
 - Prices display with two decimal places
-- The loop processes every array element
-- The pointer correctly references the first price
-- Dereferencing the pointer displays `74.69`
+- The pointer references the first Unit Price
+- Dereferencing the pointer returns `$74.69`
 - The program exits normally
 - No compilation errors occur
 - No runtime errors occur
@@ -360,41 +424,87 @@ The application should be tested to verify that:
 # ✅ Module 4 Checklist
 
 - [x] Public Kaggle dataset selected
-- [x] Dataset fields inspected
+- [x] Dataset downloaded directly from Kaggle
+- [x] Original Kaggle CSV included in repository
+- [x] Dataset inspected
 - [x] Seven dataset records selected
 - [x] Three dataset fields selected
-- [x] Product Line array created
-- [x] Unit Price array created
-- [x] Quantity array created
+- [x] C++ program opens the downloaded CSV
+- [x] Product Line values loaded into an array
+- [x] Unit Price values loaded into an array
+- [x] Quantity values loaded into an array
 - [x] Loop used to display records
 - [x] Pointer created
 - [x] Pointer connected to an array value
-- [x] Value accessed through pointer dereferencing
+- [x] Array value accessed through pointer dereferencing
 - [x] Dataset connected to Inventory Manager
-- [ ] Program compiled successfully
-- [ ] Program tested successfully
-- [ ] Module 4 files uploaded to GitHub
-- [ ] Module 4 completed
+- [x] Program compiled successfully
+- [x] Program tested successfully
+- [x] Module 4 revised based on instructor feedback
+- [x] Module 4 completed
+
+---
+
+# 🔧 Revision After Instructor Feedback
+
+The original Module 4 submission demonstrated arrays and pointers using
+values selected from the Kaggle dataset.
+
+After instructor feedback, the assignment was revised to make the Kaggle
+dataset integration explicit.
+
+The revised version now:
+
+1. Includes the original CSV downloaded from Kaggle.
+2. Opens the downloaded CSV directly from C++.
+3. Reads seven records from the dataset.
+4. Extracts three fields from those records.
+5. Stores the extracted values in C++ arrays.
+6. Displays those values using a loop.
+7. Demonstrates accessing one array value using a pointer.
+
+This revision directly demonstrates the complete workflow required by the
+assignment:
+
+```text
+Kaggle
+   ↓
+Download Dataset
+   ↓
+CSV File
+   ↓
+C++ Reads CSV
+   ↓
+Select Records
+   ↓
+Store in Arrays
+   ↓
+Display Records
+   ↓
+Pointer Demonstration
+```
 
 ---
 
 # 🔮 Future Development
 
-The arrays used in this module provide a temporary way to organize
-multiple records.
+The dataset and arrays introduced in this module provide a foundation for
+more advanced forms of inventory storage.
 
-Future modules may replace or expand these arrays using:
+Future modules can expand this work through:
 
+- Structures
 - Functions
 - Classes
 - Objects
-- Data structures
-- Files
+- Searching
+- Input validation
+- File storage
 - Databases
-- Long-term storage
+- More advanced data structures
 
-Eventually, inventory data will be represented using more advanced
-structures designed specifically for the Inventory Manager.
+The goal is to gradually move from simplified dataset records toward a
+complete Inventory Manager.
 
 ---
 
@@ -406,11 +516,14 @@ structures designed specifically for the Inventory Manager.
 **Course Repository**  
 [CPlusPlus-Application-Design](https://github.com/johnsaldivar/CPlusPlus-Application-Design)
 
-**Dataset**  
-[Supermarket Sales Dataset — Kaggle](https://www.kaggle.com/datasets/faresashraf1001/supermarket-sales)
+**Kaggle Dataset**  
+[Supermarket Sales Dataset](https://www.kaggle.com/datasets/faresashraf1001/supermarket-sales)
 
 **Previous Module**  
 [Module 03 — Variables, Cin & Cout](../Module03-Datasets-Arrays-Pointers/)
+
+**Next Module**  
+[Module 05 — Records, Headers & Functions](../Module05-Classes-Objects/)
 
 ---
 
@@ -424,6 +537,7 @@ structures designed specifically for the Inventory Manager.
 
 ![C++](https://img.shields.io/badge/C%2B%2B-Arrays%20%7C%20Pointers-00599C?style=for-the-badge&logo=cplusplus&logoColor=white)
 ![Dataset](https://img.shields.io/badge/Data-Kaggle-20BEFF?style=for-the-badge&logo=kaggle&logoColor=white)
+![Revision](https://img.shields.io/badge/Revision-Kaggle%20CSV%20Integrated-success?style=for-the-badge)
 
 **Build → Test → Improve → Connect**
 
