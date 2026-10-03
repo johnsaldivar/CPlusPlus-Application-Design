@@ -7,10 +7,10 @@
 
 ![C++](https://img.shields.io/badge/Language-C%2B%2B-00599C?style=for-the-badge&logo=cplusplus&logoColor=white)
 ![Project](https://img.shields.io/badge/Project-Inventory%20Manager-2ea44f?style=for-the-badge)
-![Module](https://img.shields.io/badge/Latest%20Module-05-blue?style=for-the-badge)
-![Progress](https://img.shields.io/badge/Progress-Module%2005%20Complete-success?style=for-the-badge)
-![Modules](https://img.shields.io/badge/Modules%20Completed-5%20of%2015-success?style=for-the-badge)
-![Revision](https://img.shields.io/badge/Module%2004-Revised-orange?style=for-the-badge)
+![Module](https://img.shields.io/badge/Latest%20Module-06-blue?style=for-the-badge)
+![Progress](https://img.shields.io/badge/Progress-Module%2006%20Complete-success?style=for-the-badge)
+![Modules](https://img.shields.io/badge/Modules%20Completed-6%20of%2015-success?style=for-the-badge)
+![Revision](https://img.shields.io/badge/Module%2004-Awaiting%20Regrade-orange?style=for-the-badge)
 ![GitHub](https://img.shields.io/badge/GitHub-johnsaldivar-181717?style=for-the-badge&logo=github)
 
 **Developed by [John Saldivar](https://github.com/johnsaldivar)**
@@ -57,9 +57,20 @@ The project begins with fundamental C++ concepts and continues to grow
 into a more organized and functional application as new topics are
 introduced throughout the course.
 
-The goal is to eventually provide a system where users can add, view,
-search, update, remove, organize, calculate, and permanently store
-inventory information.
+The goal is to eventually provide a system where users can:
+
+- Add inventory items
+- View inventory records
+- Search inventory
+- Update existing records
+- Remove records
+- Track quantities
+- Store prices
+- Calculate inventory value
+- Import external data
+- Organize information into objects
+- Save and load records
+- Work with databases and long-term storage
 
 Each module adds another layer to the application.
 
@@ -82,11 +93,18 @@ The project is intended to demonstrate:
 - External datasets
 - CSV file input
 - Records
+- Structures
 - Header files
 - Multi-file application design
+- Classes
+- Objects
+- Constructors
+- Encapsulation
+- Getters and setters
+- The `this` pointer
+- Object life cycles
 - Data structures
 - Searching and algorithms
-- Object-oriented programming
 - File and long-term data storage
 - Input validation
 - Memory management
@@ -97,9 +115,9 @@ The project is intended to demonstrate:
 
 ---
 
-# ✨ Planned Features
+# ✨ Planned & Implemented Features
 
-As the application develops, planned functionality includes:
+As the application develops, functionality includes or will include:
 
 - ➕ Add inventory items
 - 📋 View inventory
@@ -113,11 +131,14 @@ As the application develops, planned functionality includes:
 - 📊 Work with multiple inventory records
 - 🌐 Import information from external datasets
 - 📄 Read data from CSV files
+- 🧱 Represent inventory items using classes
+- 🔒 Protect object data through encapsulation
+- 🔎 Access object data through getters
+- ✏️ Modify object data through setters
 - ✅ Validate user input
 - 💾 Save inventory data
 - 📂 Load previously stored inventory
 - 🔍 Implement searching algorithms
-- 🧱 Use classes and objects
 - 🗃️ Explore database-backed storage
 - 🔐 Apply security concepts
 - 🤖 Explore AI-related functionality where appropriate
@@ -149,12 +170,41 @@ Concepts introduced or planned throughout the course include:
 - Pointers
 - Structures
 - Header files
+- Classes
+- Objects
+
+---
+
+## Object-Oriented Programming
+
+The Inventory Manager now includes object-oriented programming concepts
+introduced in Module 6:
+
+- Classes
+- Objects
+- Private data members
+- Public member functions
+- Constructors
+- Getters
+- Setters
+- Encapsulation
+- The `this` pointer
+- Object life cycles
+
+Future modules may expand this foundation with:
+
+- Inheritance
+- Polymorphism
+- More advanced constructors
+- Destructors
+- Collections of objects
+- Persistent object storage
 
 ---
 
 ## Data & File Processing
 
-The Inventory Manager now includes experience with:
+The Inventory Manager includes experience with:
 
 - Arrays
 - Parallel arrays
@@ -168,6 +218,7 @@ The Inventory Manager now includes experience with:
 - String parsing
 - Numeric conversion using `stoi()` and `stod()`
 - Inventory records
+- Structured product data
 
 ---
 
@@ -182,21 +233,8 @@ The application now includes concepts such as:
 - Multiple `.cpp` files
 - Reusable components
 - Separation of responsibilities
-
----
-
-## Object-Oriented Programming
-
-Future versions of the application will explore:
-
-- Classes
-- Objects
-- Encapsulation
-- Inheritance
-- Polymorphism
-- Constructors
-- Destructors
-- Object life cycles
+- Classes split across `.h` and `.cpp` files
+- Application coordination through `main()`
 
 ---
 
@@ -257,6 +295,11 @@ CPlusPlus-Application-Design/
 │   └── InventoryTools.cpp
 │
 ├── Module06-Records-Storage/
+│   ├── README.md
+│   ├── main.cpp
+│   ├── Product.h
+│   └── Product.cpp
+│
 ├── Module07-Security-Search/
 ├── Module08-Input-Validation/
 ├── Module09-AI-Application/
@@ -283,7 +326,7 @@ CPlusPlus-Application-Design/
 | 03 | [Variables, Cin & Cout](./Module03-Datasets-Arrays-Pointers/) | ✅ Complete |
 | 04 | [Datasets, Arrays & Pointers](./Module04-Functions-Headers/) | 🔄 Revised / Resubmitted |
 | 05 | [Records, Headers & Functions](./Module05-Classes-Objects/) | ✅ Complete |
-| 06 | Records & Storage | ⏳ Upcoming |
+| 06 | [Creating Classes & Objects](./Module06-Records-Storage/) | ✅ Complete |
 | 07 | Security & Search | ⏳ Upcoming |
 | 08 | Input Validation | ⏳ Upcoming |
 | 09 | AI Application | ⏳ Upcoming |
@@ -327,15 +370,20 @@ The application introduced:
 
 ```text
 Menu
-  ↓
+  │
+  ▼
 User Choice
-  ↓
+  │
+  ▼
 Input Validation
-  ↓
+  │
+  ▼
 switch/case
-  ↓
+  │
+  ▼
 Function
-  ↓
+  │
+  ▼
 Return to Menu
 ```
 
@@ -407,14 +455,12 @@ The original Kaggle CSV is included in the repository at:
 Module04-Functions-Headers/data/SuperMarket Analysis.csv
 ```
 
-The revised C++ program now opens the actual downloaded CSV file rather
-than manually hard-coding the selected dataset values.
+The revised C++ program opens the actual downloaded CSV file and loads
+selected dataset records into arrays.
 
 ---
 
 ## 🌐 Kaggle Dataset Workflow
-
-The revised implementation follows this process:
 
 ```text
 Kaggle
@@ -474,7 +520,7 @@ The header row is skipped:
 getline(datasetFile, line);
 ```
 
-and records are read directly from the file:
+Records are read directly from the file:
 
 ```cpp
 while (recordCount < RECORD_COUNT &&
@@ -488,15 +534,13 @@ while (recordCount < RECORD_COUNT &&
 
 ## 📦 Loading Dataset Values into Arrays
 
-The selected values are placed into arrays.
-
 ```cpp
 string productLines[RECORD_COUNT];
 double unitPrices[RECORD_COUNT];
 int quantities[RECORD_COUNT];
 ```
 
-The CSV values are then loaded using:
+The values are loaded using:
 
 ```cpp
 getline(row, productLines[recordCount], ',');
@@ -512,13 +556,11 @@ quantities[recordCount] = stoi(field);
 
 ## 👉 Pointer Demonstration
 
-A pointer references the first price in the array:
-
 ```cpp
 double* pricePtr = &unitPrices[0];
 ```
 
-Dereferencing the pointer:
+Dereferencing:
 
 ```cpp
 *pricePtr
@@ -535,10 +577,10 @@ unitPrices[0]
 ## 🔧 Revision After Instructor Feedback
 
 The original Module 4 submission demonstrated arrays and pointers using
-values selected from the Kaggle dataset.
+values selected from a Kaggle dataset.
 
-After instructor feedback, Module 4 was revised to make the external
-dataset requirement explicit.
+After instructor feedback, Module 4 was revised so the external dataset
+requirement is explicitly demonstrated.
 
 The revised submission now:
 
@@ -561,7 +603,7 @@ CSV Added:           Yes
 C++ Reads CSV:       Yes
 Arrays:              Yes
 Pointer Demo:        Yes
-Resubmission:        Prepared
+Status:              Awaiting Regrade
 ```
 
 ➡️ **[View Revised Module 04](./Module04-Functions-Headers/)**
@@ -628,7 +670,7 @@ double calculateInventoryValue(
 
 ## 📄 Custom Header
 
-The project now uses:
+The project uses:
 
 ```cpp
 #include "InventoryTools.h"
@@ -637,7 +679,7 @@ The project now uses:
 The custom header contains the record definition and function
 declarations.
 
-The function implementations are stored inside:
+Function implementations are stored inside:
 
 ```text
 InventoryTools.cpp
@@ -685,56 +727,476 @@ InventoryTools.cpp
 
 ---
 
-# 🧩 Current Application Architecture
+# ✅ Module 06 — Creating Classes & Objects
 
-After five modules, the Inventory Manager has developed several important
-layers.
+Module 6 introduced object-oriented programming to the Inventory Manager.
+
+Instead of representing an inventory item only as loosely connected data,
+the application now uses a custom **Product class**.
+
+The Product class combines data and behavior into one reusable object
+blueprint.
+
+---
+
+## 📦 Product Class
+
+```cpp
+class Product
+{
+private:
+    std::string name;
+    int sku;
+    int quantity;
+    double price;
+
+public:
+    Product(
+        const std::string& name,
+        int sku,
+        int quantity,
+        double price
+    );
+
+    void displayProduct() const;
+    double calculateInventoryValue() const;
+
+    std::string getName() const;
+    int getQuantity() const;
+    double getPrice() const;
+
+    void setQuantity(int quantity);
+    void setPrice(double price);
+};
+```
+
+The class contains four private data members:
+
+| Data Member | Type | Purpose |
+|---|---|---|
+| `name` | `string` | Product name |
+| `sku` | `int` | Product identifier |
+| `quantity` | `int` | Number of units |
+| `price` | `double` | Price per unit |
+
+---
+
+## 🔒 Encapsulation
+
+The Product class protects its data using:
+
+```cpp
+private:
+```
+
+Outside code cannot directly change these values.
+
+Instead, the application uses getters and setters.
+
+Example getter:
+
+```cpp
+product1.getQuantity();
+```
+
+Example setter:
+
+```cpp
+product1.setQuantity(8);
+```
+
+This demonstrates **encapsulation**.
+
+---
+
+## 🏗️ Constructor
+
+Each Product object is initialized using a constructor:
+
+```cpp
+Product::Product(
+    const std::string& name,
+    int sku,
+    int quantity,
+    double price
+)
+{
+    this->name = name;
+    this->sku = sku;
+    this->quantity = quantity;
+    this->price = price;
+}
+```
+
+The constructor automatically runs when an object is created.
+
+---
+
+## 👉 `this` Pointer
+
+The constructor demonstrates the `this` pointer:
+
+```cpp
+this->name = name;
+this->sku = sku;
+this->quantity = quantity;
+this->price = price;
+```
+
+`this` refers to the current Product object.
+
+The setters also use the `this` pointer:
+
+```cpp
+this->quantity = quantity;
+this->price = price;
+```
+
+---
+
+## 🧠 Member Functions
+
+The Product class contains member functions such as:
+
+```cpp
+void displayProduct() const;
+```
+
+and:
+
+```cpp
+double calculateInventoryValue() const;
+```
+
+`calculateInventoryValue()` calculates:
 
 ```text
-                         INVENTORY MANAGER
-                                │
-        ┌───────────────────────┼───────────────────────┐
-        │                       │                       │
-        ▼                       ▼                       ▼
- Development               Application               Data
- Environment                  Flow
- Module 01                  Module 02               Module 03
-        │                       │                       │
-        ▼                       ▼                       ▼
-      GitHub                  Menu                 Variables
-      Setup                   Loop                 Data Types
-      Testing              Switch/Case             User Input
-        │                       │                       │
-        └───────────────────────┼───────────────────────┘
-                                │
-                                ▼
-                       External / Multiple Data
-                              Module 04
-                                │
-                  ┌─────────────┼─────────────┐
-                  │             │             │
-                  ▼             ▼             ▼
-               Kaggle          Arrays       Pointers
-               Dataset          CSV         Memory
-                  │             │             │
-                  └─────────────┼─────────────┘
-                                │
-                                ▼
-                         Program Structure
-                              Module 05
-                                │
-                  ┌─────────────┼─────────────┐
-                  │             │             │
-                  ▼             ▼             ▼
-               Records       Headers       Functions
-                  │             │             │
-                  └─────────────┼─────────────┘
-                                │
-                                ▼
-                         Multi-File Program
-                                │
-                                ▼
-                         Future Development
+Quantity × Price
+```
+
+---
+
+## 🔎 Getters
+
+```cpp
+std::string getName() const;
+int getQuantity() const;
+double getPrice() const;
+```
+
+Getters provide controlled access to private object data.
+
+---
+
+## ✏️ Setters
+
+```cpp
+void setQuantity(int quantity);
+void setPrice(double price);
+```
+
+Setters allow private values to be modified while still controlling how
+the changes occur.
+
+---
+
+## 🧱 Product Objects
+
+Two objects are created from the Product class:
+
+```cpp
+Product product1(
+    "Brake Pads",
+    1001,
+    5,
+    39.99
+);
+
+Product product2(
+    "Oil Filter",
+    1002,
+    10,
+    8.99
+);
+```
+
+Both objects are created from the same class but contain different data.
+
+---
+
+## ▶️ `main()` as Application Coordinator
+
+Module 6 also reinforces the purpose of `main()`.
+
+```cpp
+int main()
+{
+    showWelcome();
+    showMenu();
+    demonstrateProducts();
+
+    return 0;
+}
+```
+
+Execution begins in `main()`.
+
+`main()` calls three separate functions:
+
+```text
+showWelcome()
+showMenu()
+demonstrateProducts()
+```
+
+This directly satisfies the Module 6 application-flow requirement.
+
+---
+
+## 🔀 Module 06 Application Flow
+
+```text
+                    Program Starts
+                          │
+                          ▼
+                       main()
+                          │
+            ┌─────────────┼─────────────┐
+            │             │             │
+            ▼             ▼             ▼
+      showWelcome()   showMenu()   demonstrateProducts()
+                                          │
+                                          ▼
+                                  Create Product Objects
+                                          │
+                              ┌───────────┴───────────┐
+                              │                       │
+                              ▼                       ▼
+                          product1                product2
+                              │                       │
+                              └───────────┬───────────┘
+                                          │
+                                          ▼
+                                  displayProduct()
+                                          │
+                                          ▼
+                                    Getters
+                                          │
+                                          ▼
+                                    Setters
+                                          │
+                                          ▼
+                            calculateInventoryValue()
+                                          │
+                                          ▼
+                                      Program Ends
+```
+
+---
+
+## 🔄 Object Life Cycle
+
+```text
+Product Class
+     │
+     ▼
+Constructor
+     │
+     ▼
+Object Created
+     │
+     ▼
+Object Used
+     │
+     ▼
+Member Functions
+     │
+     ▼
+Getters / Setters
+     │
+     ▼
+Object Goes Out of Scope
+     │
+     ▼
+Object Destroyed
+```
+
+A custom destructor is not required because the current Product class
+does not manually manage dynamic resources.
+
+---
+
+## 🗂️ Module 06 Architecture
+
+```text
+Module06-Records-Storage/
+│
+├── README.md
+├── main.cpp
+├── Product.h
+└── Product.cpp
+```
+
+### `main.cpp`
+
+Contains:
+
+```text
+Application Entry Point
+showWelcome()
+showMenu()
+demonstrateProducts()
+```
+
+### `Product.h`
+
+Contains:
+
+```text
+Product Class Declaration
+Private Data Members
+Constructor Declaration
+Member Function Declarations
+Getter Declarations
+Setter Declarations
+```
+
+### `Product.cpp`
+
+Contains the implementations of the Product class member functions.
+
+---
+
+## 🧪 Module 06 Testing
+
+Module 6 was compiled and tested successfully.
+
+Testing verified that:
+
+- `main()` starts the application
+- `showWelcome()` executes
+- `showMenu()` executes
+- `demonstrateProducts()` executes
+- Two Product objects are created
+- Both Product objects display correctly
+- Constructor values are stored correctly
+- Getters return the correct values
+- Setter changes Product 1 quantity from `5` to `8`
+- Updated inventory value becomes `$319.92`
+- Product inventory values calculate correctly
+- Encapsulation works as expected
+- The program exits normally
+- No compilation errors occur
+- No runtime errors occur
+
+---
+
+## ✅ Module 06 Requirements
+
+| Assignment Requirement | Implementation |
+|---|---|
+| Create a class | `Product` |
+| Private data members | `name`, `sku`, `quantity`, `price` |
+| Constructor | `Product(...)` |
+| At least two member functions | `displayProduct()`, `calculateInventoryValue()` |
+| Getter or setter | Multiple getters and setters |
+| At least two objects | `product1`, `product2` |
+| Display both objects | `displayProduct()` |
+| Demonstrate encapsulation | Private members + controlled access |
+| Demonstrate `this` | Constructor and setters |
+| Use `main()` | Application entry point |
+| Call three functions from `main()` | `showWelcome()`, `showMenu()`, `demonstrateProducts()` |
+| Explain program flow | Documented above |
+
+### Completed
+
+- [x] `Product` class created
+- [x] Private data members created
+- [x] Constructor created
+- [x] At least two member functions created
+- [x] Getter functions created
+- [x] Setter functions created
+- [x] `this` pointer demonstrated
+- [x] Encapsulation demonstrated
+- [x] Two Product objects created
+- [x] Both Product objects displayed
+- [x] `main()` used as application entry point
+- [x] Three functions called from `main()`
+- [x] Application flow documented
+- [x] Object life cycle documented
+- [x] Program compiled successfully
+- [x] Program tested successfully
+- [x] Module 6 files uploaded to GitHub
+- [x] Module 6 completed
+
+➡️ **[View Module 06](./Module06-Records-Storage/)**
+
+---
+
+# 🧩 Current Application Architecture
+
+After six modules, the Inventory Manager has progressed from a basic
+console program into a modular object-oriented C++ application.
+
+```text
+                           INVENTORY MANAGER
+                                  │
+          ┌───────────────────────┼───────────────────────┐
+          │                       │                       │
+          ▼                       ▼                       ▼
+    Development               Application               Data
+    Environment                  Flow
+     Module 01                Module 02               Module 03
+          │                       │                       │
+          ▼                       ▼                       ▼
+       GitHub                    Menu                 Variables
+       Setup                     Loop                 Data Types
+       Testing               Switch / Case           User Input
+          │                       │                       │
+          └───────────────────────┼───────────────────────┘
+                                  │
+                                  ▼
+                         External / Multiple Data
+                                Module 04
+                                  │
+                   ┌──────────────┼──────────────┐
+                   │              │              │
+                   ▼              ▼              ▼
+                Kaggle           Arrays        Pointers
+                Dataset           CSV           Memory
+                   │              │              │
+                   └──────────────┼──────────────┘
+                                  │
+                                  ▼
+                           Program Structure
+                                Module 05
+                                  │
+                   ┌──────────────┼──────────────┐
+                   │              │              │
+                   ▼              ▼              ▼
+                Records        Headers        Functions
+                   │              │              │
+                   └──────────────┼──────────────┘
+                                  │
+                                  ▼
+                       Object-Oriented Design
+                                Module 06
+                                  │
+         ┌────────────────────────┼────────────────────────┐
+         │                        │                        │
+         ▼                        ▼                        ▼
+      Classes                  Objects               Encapsulation
+         │                        │                        │
+         ▼                        ▼                        ▼
+   Constructors              Getters/Setters          this Pointer
+         │                        │                        │
+         └────────────────────────┼────────────────────────┘
+                                  │
+                                  ▼
+                          Product Objects
+                                  │
+                                  ▼
+                          Future Development
 ```
 
 ---
@@ -765,13 +1227,56 @@ Headers
 Functions
         │
         ▼
-Future Modules
+Module 06
 Classes
-Storage
+Objects
+Encapsulation
+        │
+        ▼
+Future Modules
+Persistent Storage
 Searching
 Validation
+Inheritance
 Databases
 AI
+```
+
+---
+
+# 🔗 Data & Design Progression
+
+The project has evolved from individual values toward reusable objects.
+
+```text
+Variable
+   │
+   ▼
+Array
+   │
+   ▼
+Multiple Records
+   │
+   ▼
+struct Record
+   │
+   ▼
+Functions
+   │
+   ▼
+Class
+   │
+   ▼
+Object
+   │
+   ▼
+Collection of Objects
+   │
+   ▼
+File / Database
+   │
+   ▼
+Complete Inventory System
 ```
 
 ---
@@ -822,19 +1327,13 @@ git commit -m "Describe the changes made"
 git push
 ```
 
-For the Module 4 revision, an appropriate commit message is:
-
-```text
-Revise Module 4 to load actual Kaggle CSV dataset
-```
-
 ---
 
 # 🧪 Testing
 
 Each module is tested before being considered complete.
 
-Testing includes:
+Testing now includes:
 
 ```text
 Compilation
@@ -847,6 +1346,12 @@ Pointer Access
 Record Creation
 Calculations
 Multi-File Compilation
+Class Construction
+Object Creation
+Getters
+Setters
+Encapsulation
+Member Functions
 Runtime Behavior
 ```
 
@@ -883,6 +1388,24 @@ Module 5 testing verified that the application can:
 
 ---
 
+## Module 06 Testing
+
+Module 6 testing verified that:
+
+- The Product class compiles successfully
+- Two Product objects are created
+- Constructor values are assigned correctly
+- Both Product objects display correctly
+- Inventory values calculate correctly
+- Getters return private values
+- Setters update private values
+- The `this` pointer is used correctly
+- Encapsulation protects object data
+- Three functions are called from `main()`
+- The program exits normally
+
+---
+
 # ▶️ Building & Running
 
 The application requires a compatible C++ compiler.
@@ -893,11 +1416,15 @@ The application requires a compatible C++ compiler.
 g++ inventory_manager.cpp -o inventory_manager
 ```
 
+---
+
 ## Module 03
 
 ```bash
 g++ inventory_welcome.cpp -o inventory_welcome
 ```
+
+---
 
 ## Module 04
 
@@ -911,10 +1438,35 @@ The Kaggle CSV must be available at:
 data/SuperMarket Analysis.csv
 ```
 
+---
+
 ## Module 05
 
 ```bash
 g++ main.cpp InventoryTools.cpp -o inventory_manager
+```
+
+---
+
+## Module 06
+
+Because the Product class implementation is stored separately, both source
+files must be compiled together:
+
+```bash
+g++ main.cpp Product.cpp -o inventory_manager
+```
+
+### Windows
+
+```bash
+inventory_manager.exe
+```
+
+### Linux / macOS
+
+```bash
+./inventory_manager
 ```
 
 ---
@@ -972,6 +1524,15 @@ Headers & Functions
         │
         ▼
 Multi-File Application
+        │
+        ▼
+Classes & Objects
+        │
+        ▼
+Encapsulation
+        │
+        ▼
+Future Persistent Application
 ```
 
 Future modules will continue expanding this architecture.
@@ -990,9 +1551,10 @@ Module 02:     Complete
 Module 03:     Complete
 Module 04:     Revised / Resubmitted
 Module 05:     Complete
+Module 06:     Complete
 
-Modules Done:  5 / 15
-Latest Module: Module 05
+Modules Done:  6 / 15
+Latest Module: Module 06
 
 Module 04 Revision:
 Kaggle CSV:    Included
@@ -1000,6 +1562,15 @@ CSV Parsing:   Implemented
 Arrays:        Implemented
 Pointers:      Implemented
 Status:        Awaiting Regrade
+
+Module 06:
+Class:         Product
+Objects:       2
+Encapsulation: Implemented
+Getters:       Implemented
+Setters:       Implemented
+this Pointer:  Demonstrated
+Status:        Complete
 
 Repository:    Public
 Development:   Active
@@ -1024,6 +1595,7 @@ Development:   Active
 - ✅ [Module 03 — Variables, Cin & Cout](./Module03-Datasets-Arrays-Pointers/)
 - 🔄 [Module 04 — Datasets, Arrays & Pointers — Revised](./Module04-Functions-Headers/)
 - ✅ [Module 05 — Records, Headers & Functions](./Module05-Classes-Objects/)
+- ✅ [Module 06 — Creating Classes & Objects](./Module06-Records-Storage/)
 
 ---
 
@@ -1036,8 +1608,9 @@ Development:   Active
 **John Saldivar**
 
 ![C++](https://img.shields.io/badge/C%2B%2B-Application%20Development-00599C?style=for-the-badge&logo=cplusplus&logoColor=white)
-![Modules](https://img.shields.io/badge/Modules%20Completed-5%20of%2015-success?style=for-the-badge)
-![Latest](https://img.shields.io/badge/Latest%20Module-05-blue?style=for-the-badge)
+![Modules](https://img.shields.io/badge/Modules%20Completed-6%20of%2015-success?style=for-the-badge)
+![Latest](https://img.shields.io/badge/Latest%20Module-06-blue?style=for-the-badge)
+![OOP](https://img.shields.io/badge/OOP-Classes%20%26%20Objects-purple?style=for-the-badge)
 ![Revision](https://img.shields.io/badge/Module%2004-Awaiting%20Regrade-orange?style=for-the-badge)
 ![GitHub](https://img.shields.io/badge/Version%20Control-GitHub-181717?style=for-the-badge&logo=github)
 
