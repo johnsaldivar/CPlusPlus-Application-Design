@@ -7,9 +7,10 @@
 
 ![C++](https://img.shields.io/badge/Language-C%2B%2B-00599C?style=for-the-badge&logo=cplusplus&logoColor=white)
 ![Project](https://img.shields.io/badge/Project-Inventory%20Manager-2ea44f?style=for-the-badge)
-![Module](https://img.shields.io/badge/Latest%20Module-07-blue?style=for-the-badge)
-![Progress](https://img.shields.io/badge/Progress-Module%2007%20Complete-success?style=for-the-badge)
-![Modules](https://img.shields.io/badge/Modules%20Completed-7%20of%2015-success?style=for-the-badge)
+![Module](https://img.shields.io/badge/Latest%20Module-08-blue?style=for-the-badge)
+![Progress](https://img.shields.io/badge/Progress-Module%2008%20Complete-success?style=for-the-badge)
+![Modules](https://img.shields.io/badge/Modules%20Completed-8%20of%2015-success?style=for-the-badge)
+![Midway](https://img.shields.io/badge/Midway%20Project-Complete-success?style=for-the-badge)
 ![Revision](https://img.shields.io/badge/Module%2004-Awaiting%20Regrade-orange?style=for-the-badge)
 ![GitHub](https://img.shields.io/badge/GitHub-johnsaldivar-181717?style=for-the-badge&logo=github)
 
@@ -70,10 +71,16 @@ The application now demonstrates:
 - Role-based permissions
 - Sorted records
 - Binary search
+- Input validation
+- Required-field and range checking
+- Date-format validation
+- Duplicate-SKU protection
+- File I/O and persistent text-file storage
+- Dynamic memory and pointer-based storage in the Midway Project
 
 Future modules will continue expanding the application with additional
-data structures, validation, storage, databases, security concepts, and
-AI-related functionality.
+data structures, database concepts, security concepts, and AI-related
+functionality.
 
 ---
 
@@ -148,8 +155,11 @@ The Inventory Manager currently includes or will eventually include:
 - 🔢 Maintain records in sorted order
 - 🔍 Search efficiently using binary search
 - ✅ Validate user input
-- 💾 Save inventory data
-- 📂 Load stored inventory
+- 🧾 Validate required fields, ranges, and dates
+- 🚫 Reject duplicate SKUs
+- 💾 Save inventory data to a text file
+- 📂 Load previously stored inventory
+- 🧠 Demonstrate dynamic memory and pointer-based storage
 - 🗃️ Explore database-backed storage
 - 🤖 Explore AI functionality where appropriate
 
@@ -181,6 +191,10 @@ Concepts demonstrated include:
 - Header files
 - Classes
 - Objects
+- Dynamic memory
+- `new[]` / `delete[]`
+- `sizeof()`
+- File streams
 
 ---
 
@@ -244,12 +258,68 @@ The project includes experience with:
 - Kaggle datasets
 - CSV files
 - `ifstream`
+- `ofstream`
 - `getline()`
 - String parsing
 - `stoi()`
 - `stod()`
+- Text-file persistence
+- `inventory.txt`
 - Product records
 - Product objects
+- Dynamic Product arrays
+- Pointer access to dynamically allocated storage
+
+---
+
+## Input Validation & Data Protection
+
+Module 8 adds a reusable validation layer before data is accepted by the
+Inventory Manager.
+
+The application now validates:
+
+- Role selections
+- Menu selections
+- Integer input
+- Decimal input
+- Numeric ranges
+- Required Product names
+- Product-name length
+- SKU uniqueness
+- `MM/DD/YYYY` date formatting
+- Real calendar dates
+- Leap years
+
+Invalid values are rejected with a useful message and the user is allowed
+to try again.
+
+---
+
+## Midway Project Concepts
+
+The separate **Midway Project** builds on Modules 1–8 and demonstrates the
+required course concepts in one integrated Inventory Management System.
+
+It includes:
+
+- Data types and data sizes
+- Strings
+- Arrays
+- Pointers
+- Dynamic memory
+- Binary search
+- Classes
+- File I/O
+- Persistent `inventory.txt` storage
+- Input validation
+- Admin and Regular User permissions
+
+The Midway Project is stored separately in the repository under:
+
+```text
+Midterm/
+```
 
 ---
 
@@ -348,6 +418,31 @@ CPlusPlus-Application-Design/
 │   └── InventorySystem.cpp
 │
 ├── Module08-Input-Validation/
+│   ├── README.md
+│   ├── main.cpp
+│   ├── Product.h
+│   ├── Product.cpp
+│   ├── User.h
+│   ├── User.cpp
+│   ├── InventorySystem.h
+│   ├── InventorySystem.cpp
+│   ├── InputValidator.h
+│   └── InputValidator.cpp
+│
+├── Midterm/
+│   ├── README.md
+│   ├── main.cpp
+│   ├── Product.h
+│   ├── Product.cpp
+│   ├── User.h
+│   ├── User.cpp
+│   ├── InventorySystem.h
+│   ├── InventorySystem.cpp
+│   ├── InputValidator.h
+│   ├── InputValidator.cpp
+│   ├── inventory.txt
+│   └── output.pdf
+│
 ├── Module09-AI-Application/
 ├── Module10-Future-of-AI/
 ├── Module11-Application-Showcase/
@@ -375,7 +470,7 @@ CPlusPlus-Application-Design/
 | 05 | [Records, Headers & Functions](./Module05-Classes-Objects/) | ✅ Complete |
 | 06 | [Creating Classes & Objects](./Module06-Records-Storage/) | ✅ Complete |
 | 07 | [Security, Roles & Binary Search](./Module07-Security-Search/) | ✅ Complete |
-| 08 | Input Validation | ⏳ Upcoming |
+| 08 | [Input Validation & Protecting Data](./Module08-Input-Validation/) | ✅ Complete |
 | 09 | AI Application | ⏳ Upcoming |
 | 10 | Future of AI | ⏳ Upcoming |
 | 11 | Application Showcase | ⏳ Upcoming |
@@ -1140,37 +1235,259 @@ The Regular User role was tested to verify:
 
 ---
 
-# 🧩 Current Application Architecture
+# ✅ Module 08 — Input Validation & Protecting Data
 
-After seven modules, the Inventory Manager has progressed from a simple
-console program into a modular object-oriented application with basic
-authorization and algorithm-based searching.
+Module 8 adds a reusable validation layer to the Inventory Manager.
+
+The application no longer assumes that user input is valid. Values are checked
+before they are accepted or stored.
+
+Validation now covers:
 
 ```text
-                           INVENTORY MANAGER
-                                  │
-           ┌──────────────────────┼──────────────────────┐
-           │                      │                      │
-           ▼                      ▼                      ▼
-       Application               Data                 Security
-          Flow
-       Module 02              Modules 03–06          Module 07
-           │                      │                      │
-           ▼                      ▼                      ▼
-          Menu                 Product                  User
-          Loop                 Objects              Permissions
-       switch/case                │                      │
-                                  │             ┌────────┴────────┐
-                                  │             │                 │
-                                  ▼             ▼                 ▼
-                              Inventory       Admin         RegularUser
-                                  │
-                                  ▼
-                           Sorted Products
-                                  │
-                                  ▼
-                            Binary Search
+Type
+Range
+Required Fields
+Unique IDs
+Date Format
+Calendar Dates
+Leap Years
 ```
+
+The module introduces the `InputValidator` class:
+
+```cpp
+class InputValidator
+{
+public:
+    static int getIntInRange(...);
+    static double getDoubleInRange(...);
+    static std::string getRequiredString(...);
+    static std::string getDateMMDDYYYY(...);
+    static bool isValidDate(...);
+};
+```
+
+Product records also include a validated date:
+
+```cpp
+std::string dateAdded;
+```
+
+### Validation Examples
+
+The application rejects:
+
+```text
+Negative SKU values
+Negative quantities
+Invalid prices
+Empty Product names
+Whitespace-only names
+Duplicate SKUs
+Incorrect date formats
+Impossible calendar dates
+Invalid leap-year dates
+Nonnumeric menu input
+Out-of-range menu choices
+```
+
+Each invalid entry produces a useful error message and allows the user to try
+again.
+
+### Existing Features Preserved
+
+Module 8 keeps the functionality from Module 7:
+
+- [x] Admin permissions
+- [x] Regular User restrictions
+- [x] Sorted Product records
+- [x] Sorted insertion
+- [x] Binary search
+- [x] Record deletion
+- [x] Multi-file application design
+
+### Completed
+
+- [x] InputValidator class created
+- [x] Integer validation implemented
+- [x] Decimal validation implemented
+- [x] Range validation implemented
+- [x] Required-field validation implemented
+- [x] Empty names rejected
+- [x] Negative values rejected where invalid
+- [x] Duplicate SKU protection implemented
+- [x] Date-format validation implemented
+- [x] Calendar-date validation implemented
+- [x] Leap-year validation implemented
+- [x] Retry loops implemented
+- [x] Helpful error messages implemented
+- [x] Program compiled successfully
+- [x] Admin workflow tested successfully
+- [x] Regular User workflow tested successfully
+- [x] Module 8 uploaded to GitHub
+- [x] Module 8 completed
+
+➡️ **[View Module 08](./Module08-Input-Validation/)**
+
+---
+
+# 🎓 Midway Project — Inventory Management System
+
+The Midway Project is a separate project milestone that combines the C++
+concepts introduced throughout the first half of the course into one complete
+Inventory Management System.
+
+It is stored in:
+
+```text
+Midterm/
+```
+
+The Midway version builds on the Inventory Manager developed in Modules 1–8
+while adding persistent file storage and dynamic memory.
+
+## Required Concepts Demonstrated
+
+| Required Concept | Midway Implementation |
+|---|---|
+| Data types and data sizes | Multiple C++ types + `sizeof()` demonstration |
+| File type | `inventory.txt` |
+| Pointers | Pointer access to dynamically allocated Product storage |
+| Arrays | Product collection |
+| Search algorithm | Binary search by SKU |
+| Strings | Product names, dates, usernames |
+| File I/O | `ifstream` / `ofstream` |
+| At least two classes | `Product`, `InventorySystem`, `User`, `InputValidator` |
+| Dynamic memory | `new[]` / `delete[]` |
+
+## Midway Features
+
+The completed project includes:
+
+- Admin and Regular User roles
+- Role-based authorization
+- Add Product
+- View Products
+- Search Products
+- Delete Products
+- Sorted insertion by SKU
+- Binary search
+- Duplicate SKU protection
+- Input validation
+- Date validation
+- Dynamic Product storage
+- Pointer demonstration
+- Data-size demonstration
+- Text-file loading
+- Text-file saving
+- Persistent inventory data
+
+## Persistent Storage
+
+The Midway Project uses:
+
+```text
+inventory.txt
+```
+
+Inventory records are loaded from the file and saved back to disk so the
+application can preserve data between program runs.
+
+## Dynamic Memory
+
+The Product collection is dynamically allocated and accessed through a
+pointer.
+
+This demonstrates:
+
+```text
+Product*
+new[]
+delete[]
+Pointer Access
+Dynamic Array Storage
+```
+
+## Midway Report
+
+The Midway folder also contains:
+
+```text
+output.pdf
+```
+
+The report documents:
+
+- What the program does
+- How the program works
+- Required C++ concepts
+- Program architecture
+- Compilation/testing results
+- Screenshots of the running application
+
+### Completed
+
+- [x] Midway Inventory Management System built
+- [x] Required C++ concepts implemented
+- [x] Dynamic memory implemented
+- [x] Pointer demonstration implemented
+- [x] Binary search implemented
+- [x] File I/O implemented
+- [x] Persistent text-file storage implemented
+- [x] Multiple classes implemented
+- [x] Input validation integrated
+- [x] Role permissions integrated
+- [x] Project compiled successfully
+- [x] Admin workflow tested
+- [x] Regular User workflow tested
+- [x] File save/load tested
+- [x] `output.pdf` created
+- [x] Midway Project completed
+
+➡️ **[View Midway Project](./Midterm/)**
+
+---
+
+# 🧩 Current Application Architecture
+
+After eight modules and the Midway milestone, the Inventory Manager has
+progressed from a basic console program into a modular application with
+validation, role-based permissions, searching, and persistent storage.
+
+```text
+                         INVENTORY MANAGER
+                                │
+       ┌────────────────────────┼────────────────────────┐
+       │                        │                        │
+       ▼                        ▼                        ▼
+      User                   Product              InputValidator
+       │                        │                        │
+ ┌─────┴─────┐                  │              ┌─────────┼─────────┐
+ │           │                  │              │         │         │
+ ▼           ▼                  ▼              ▼         ▼         ▼
+Admin   RegularUser        Product Data       Type      Range     Format
+ │           │                  │                        │
+ └─────┬─────┘                  └──────────────┬─────────┘
+       │                                      │
+       ▼                                      ▼
+ Authorization                         InventorySystem
+                                              │
+                       ┌──────────────────────┼──────────────────────┐
+                       │                      │                      │
+                       ▼                      ▼                      ▼
+                 Sorted Records         Binary Search         File I/O
+                       │                                         │
+                       ▼                                         ▼
+                Dynamic Storage                           inventory.txt
+                       │
+                       ▼
+                    Product*
+```
+
+The standard Module 8 version focuses on validation. The separate Midway
+Project extends the same architecture with dynamic memory and persistent
+file storage.
 
 ---
 
@@ -1214,11 +1531,25 @@ Sorted Records
 Binary Search
         │
         ▼
-Future Modules
-Validation
+Module 08
+Input Validation
+Required Fields
+Ranges
+Dates
+Duplicate Protection
+        │
+        ▼
+Midway Project
+Dynamic Memory
+Pointers
+File I/O
 Persistent Storage
+        │
+        ▼
+Future Modules
 Databases
 AI
+Application Showcase
 ```
 
 ---
@@ -1254,6 +1585,15 @@ Binary Search
    │
    ▼
 Role-Based Access
+   │
+   ▼
+Input Validation
+   │
+   ▼
+Dynamic Memory
+   │
+   ▼
+File I/O
    │
    ▼
 Persistent Storage
@@ -1304,7 +1644,7 @@ Typical Git workflow:
 
 ```bash
 git add .
-git commit -m "Complete Module 7 security roles and binary search"
+git commit -m "Complete Module 8 and Midway Project"
 git push
 ```
 
@@ -1337,6 +1677,17 @@ Permissions
 Sorted Insertion
 Binary Search
 Record Deletion
+Input Type Validation
+Range Validation
+Required Fields
+Date Validation
+Duplicate SKU Protection
+Dynamic Memory
+Pointer Access
+File Loading
+File Saving
+Persistent Storage
+Data Size Demonstration
 Runtime Behavior
 ```
 
@@ -1387,6 +1738,34 @@ Compile all implementation files together:
 ```bash
 g++ main.cpp Product.cpp User.cpp InventorySystem.cpp -o inventory_manager
 ```
+
+## Module 08
+
+```bash
+g++ -std=c++17 main.cpp Product.cpp User.cpp InventorySystem.cpp InputValidator.cpp -o inventory_manager
+```
+
+## Midway Project
+
+From inside the `Midterm/` folder:
+
+```bash
+g++ -std=c++17 -Wall -Wextra -pedantic *.cpp -o inventory_manager
+```
+
+The Midway version reads and writes:
+
+```text
+inventory.txt
+```
+
+and includes:
+
+```text
+output.pdf
+```
+
+as the project report.
 
 ### Windows
 
@@ -1472,10 +1851,23 @@ Sorted Records
 Binary Search
         │
         ▼
-Future Persistent Application
+Input Validation
+        │
+        ▼
+Dynamic Memory
+        │
+        ▼
+File I/O
+        │
+        ▼
+Persistent Inventory Storage
 ```
 
-Future modules will continue expanding the Inventory Manager.
+The Midway Project demonstrates how the concepts introduced throughout the
+first eight modules can work together inside one larger application.
+
+Future modules will continue expanding the Inventory Manager with additional
+application-design, database, and AI concepts.
 
 ---
 
@@ -1493,9 +1885,10 @@ Module 04:     Revised / Resubmitted
 Module 05:     Complete
 Module 06:     Complete
 Module 07:     Complete
+Module 08:     Complete
 
-Modules Done:  7 / 15
-Latest Module: Module 07
+Modules Done:  8 / 15
+Latest Module: Module 08
 
 Module 04 Revision:
 Kaggle CSV:    Included
@@ -1504,14 +1897,27 @@ Arrays:        Implemented
 Pointers:      Implemented
 Status:        Awaiting Regrade
 
-Module 07:
-Admin Role:       Implemented
-Regular User:     Implemented
-Permissions:      Implemented
-Inheritance:      Implemented
-Sorted Records:   Implemented
-Binary Search:    Implemented
-Status:           Complete
+Module 08:
+Type Validation:      Implemented
+Range Validation:     Implemented
+Required Fields:      Implemented
+Date Validation:      Implemented
+Duplicate SKU Check:  Implemented
+Retry Logic:          Implemented
+Status:               Complete
+
+Midway Project:
+Inventory System:     Complete
+Dynamic Memory:       Implemented
+Pointers:             Implemented
+Arrays:               Implemented
+Binary Search:        Implemented
+File I/O:             Implemented
+Persistent Storage:   Implemented
+Classes:              Implemented
+Input Validation:     Implemented
+output.pdf:            Complete
+Status:                Complete
 
 Repository:    Public
 Development:   Active
@@ -1538,6 +1944,8 @@ Development:   Active
 - ✅ [Module 05 — Records, Headers & Functions](./Module05-Classes-Objects/)
 - ✅ [Module 06 — Creating Classes & Objects](./Module06-Records-Storage/)
 - ✅ [Module 07 — Security, Roles & Binary Search](./Module07-Security-Search/)
+- ✅ [Module 08 — Input Validation & Protecting Data](./Module08-Input-Validation/)
+- 🎓 [Midway Project — Inventory Management System](./Midterm/)
 
 ---
 
@@ -1550,9 +1958,10 @@ Development:   Active
 **John Saldivar**
 
 ![C++](https://img.shields.io/badge/C%2B%2B-Application%20Development-00599C?style=for-the-badge&logo=cplusplus&logoColor=white)
-![Modules](https://img.shields.io/badge/Modules%20Completed-7%20of%2015-success?style=for-the-badge)
-![Latest](https://img.shields.io/badge/Latest%20Module-07-blue?style=for-the-badge)
-![Security](https://img.shields.io/badge/Security-Role%20Based-purple?style=for-the-badge)
+![Modules](https://img.shields.io/badge/Modules%20Completed-8%20of%2015-success?style=for-the-badge)
+![Latest](https://img.shields.io/badge/Latest%20Module-08-blue?style=for-the-badge)
+![Validation](https://img.shields.io/badge/Input-Validation-success?style=for-the-badge)
+![Midway](https://img.shields.io/badge/Midway%20Project-Complete-success?style=for-the-badge)
 ![Search](https://img.shields.io/badge/Search-Binary%20Search-orange?style=for-the-badge)
 ![Revision](https://img.shields.io/badge/Module%2004-Awaiting%20Regrade-orange?style=for-the-badge)
 ![GitHub](https://img.shields.io/badge/Version%20Control-GitHub-181717?style=for-the-badge&logo=github)
