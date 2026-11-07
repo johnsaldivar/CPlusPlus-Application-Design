@@ -1,20 +1,17 @@
 <div align="center">
 
-# 💻 C++ Application Design
+# 🤖 Module 09 — Using AI to Expand Your Application
 
-### 📦 Inventory Manager
-### Course Projects & Application Development Portfolio
+### 📦 Inventory Manager — AI Restock Recommendation Assistant
 
-![C++](https://img.shields.io/badge/Language-C%2B%2B-00599C?style=for-the-badge&logo=cplusplus&logoColor=white)
-![Project](https://img.shields.io/badge/Project-Inventory%20Manager-2ea44f?style=for-the-badge)
-![Module](https://img.shields.io/badge/Latest%20Module-08-blue?style=for-the-badge)
-![Progress](https://img.shields.io/badge/Progress-Module%2008%20Complete-success?style=for-the-badge)
-![Modules](https://img.shields.io/badge/Modules%20Completed-8%20of%2015-success?style=for-the-badge)
-![Midway](https://img.shields.io/badge/Midway%20Project-Complete-success?style=for-the-badge)
-![Revision](https://img.shields.io/badge/Module%2004-Awaiting%20Regrade-orange?style=for-the-badge)
-![GitHub](https://img.shields.io/badge/GitHub-johnsaldivar-181717?style=for-the-badge&logo=github)
+[![Module](https://img.shields.io/badge/Module-09-4C8BF5?style=for-the-badge)](./)
+[![Language](https://img.shields.io/badge/Language-C%2B%2B-00599C?style=for-the-badge&logo=cplusplus&logoColor=white)](https://isocpp.org/)
+[![Project](https://img.shields.io/badge/Project-Inventory%20Manager-2ea44f?style=for-the-badge)](#)
+[![Feature](https://img.shields.io/badge/AI-Restock%20Recommendations-purple?style=for-the-badge)](#)
+[![Prototype](https://img.shields.io/badge/AI-Mock%20Prototype-orange?style=for-the-badge)](#)
+[![Status](https://img.shields.io/badge/Status-Complete-success?style=for-the-badge)](#)
 
-**Developed by [John Saldivar](https://github.com/johnsaldivar)**
+**Author:** [John Saldivar](https://github.com/johnsaldivar)
 
 **Build → Test → Improve → Connect**
 
@@ -22,1476 +19,655 @@
 
 ---
 
-## 📖 About This Repository
+# 📖 Overview
 
-This repository contains my coursework, programming assignments, and
-application development work for my **C++ Application Design** course.
+Module 9 explores how artificial intelligence can become a feature inside an
+existing C++ application rather than only being used as a tool to write code.
 
-Throughout the course, I am developing a C++ application while learning
-new programming concepts and applying them to the project as it grows.
+For this assignment, the Inventory Manager adds one AI-focused feature:
 
-Rather than treating every assignment as an unrelated program, this
-repository documents the development of one larger application and the
-skills introduced throughout each module.
+> **AI Restock Recommendation Assistant**
 
-My semester project is an **Inventory Manager**.
+The feature analyzes inventory information and provides a classification,
+recommendation, and explanation for each Product.
 
----
-
-## 👨‍💻 Developer
-
-**John Saldivar**
-
-- GitHub: [@johnsaldivar](https://github.com/johnsaldivar)
-- Repository: [CPlusPlus-Application-Design](https://github.com/johnsaldivar/CPlusPlus-Application-Design)
-
----
-
-# 📦 Inventory Manager
-
-## 🚀 Project Overview
-
-The **Inventory Manager** is a command-line C++ application designed to
-manage inventory records.
-
-The project begins with fundamental C++ concepts and continues to grow
-into a more organized and functional application as new topics are
-introduced throughout the course.
-
-The application now demonstrates:
-
-- Inventory records
-- External dataset integration
-- CSV processing
-- Arrays and pointers
-- Functions and headers
-- Classes and objects
-- Encapsulation
-- Inheritance
-- Role-based permissions
-- Sorted records
-- Binary search
-- Input validation
-- Required-field and range checking
-- Date-format validation
-- Duplicate-SKU protection
-- File I/O and persistent text-file storage
-- Dynamic memory and pointer-based storage in the Midway Project
-
-Future modules will continue expanding the application with additional
-data structures, database concepts, security concepts, and AI-related
-functionality.
-
----
-
-# 🎯 Project Goals
-
-The Inventory Manager is being developed incrementally throughout the
-semester.
-
-The project is intended to demonstrate:
-
-- C++ fundamentals
-- Variables and data types
-- Console input and output
-- Menu-driven application flow
-- Functions
-- Arrays
-- Pointers
-- External datasets
-- CSV file input
-- Records
-- Structures
-- Header files
-- Multi-file application design
-- Classes
-- Objects
-- Constructors
-- Encapsulation
-- Getters and setters
-- The `this` pointer
-- Object life cycles
-- Inheritance
-- Polymorphic interfaces
-- Access modifiers
-- Role-based permissions
-- Sorted records
-- Binary search
-- Data structures
-- Searching and algorithms
-- File and long-term data storage
-- Input validation
-- Memory management
-- Security concepts
-- Database concepts
-- Artificial intelligence concepts
-- Version control using Git and GitHub
-
----
-
-# ✨ Planned & Implemented Features
-
-The Inventory Manager currently includes or will eventually include:
-
-- ➕ Add inventory items
-- 📋 View inventory records
-- 🔎 Search inventory records
-- ✏️ Update existing items
-- 🗑️ Remove inventory records
-- 🔢 Track item quantities
-- 🏷️ Organize products
-- 💲 Store pricing information
-- 🧮 Calculate inventory value
-- 📊 Work with multiple records
-- 🌐 Import external datasets
-- 📄 Read data from CSV files
-- 🧱 Represent inventory using classes
-- 🔒 Protect object data through encapsulation
-- 🔎 Access data through getters
-- ✏️ Modify data through setters
-- 👑 Support Admin permissions
-- 👤 Support Regular User permissions
-- 🔐 Restrict actions according to role
-- 🔢 Maintain records in sorted order
-- 🔍 Search efficiently using binary search
-- ✅ Validate user input
-- 🧾 Validate required fields, ranges, and dates
-- 🚫 Reject duplicate SKUs
-- 💾 Save inventory data to a text file
-- 📂 Load previously stored inventory
-- 🧠 Demonstrate dynamic memory and pointer-based storage
-- 🗃️ Explore database-backed storage
-- 🤖 Explore AI functionality where appropriate
-
----
-
-# 🧠 Skills & Concepts
-
-## Core C++
-
-Concepts demonstrated include:
-
-- `main()`
-- Variables
-- Data types
-- Strings
-- Integers
-- Floating-point numbers
-- Characters
-- Booleans
-- `cin`
-- `cout`
-- Conditional logic
-- `switch/case`
-- Loops
-- Functions
-- Arrays
-- Pointers
-- Structures
-- Header files
-- Classes
-- Objects
-- Dynamic memory
-- `new[]` / `delete[]`
-- `sizeof()`
-- File streams
-
----
-
-## Object-Oriented Programming
-
-The Inventory Manager now demonstrates:
-
-- Classes
-- Objects
-- Private data members
-- Protected data members
-- Public interfaces
-- Constructors
-- Getters
-- Setters
-- Encapsulation
-- The `this` pointer
-- Object life cycles
-- Base classes
-- Derived classes
-- Inheritance
-- Virtual functions
-- Shared interfaces
-
-Module 7 extends object-oriented design through:
+Example classifications include:
 
 ```text
-User
- ├── Admin
- └── RegularUser
+CRITICAL
+RESTOCK SOON
+MONITOR
+HEALTHY
+```
+
+Because a live AI service is not required for the assignment, this module uses
+a **mock AI prototype**. The prototype uses deterministic recommendation rules
+to simulate the type of structured result a future AI model or external AI
+service could return.
+
+The program clearly identifies this as a prototype rather than a trained
+machine-learning model.
+
+---
+
+# ✅ Assignment Requirements
+
+The Module 9 assignment asks the student to:
+
+1. Choose one AI-powered feature for the existing application.
+2. Describe what the feature does.
+3. Describe what data the feature would need.
+4. Describe what the user would see.
+5. Explain where AI fits into the current application architecture.
+6. Build a mock version or prototype if a live AI service is not available.
+
+This project directly addresses every requirement.
+
+| Assignment Requirement | Inventory Manager Implementation |
+|---|---|
+| Choose one AI feature | AI Restock Recommendation Assistant |
+| Explain what it does | Classifies inventory and recommends restocking actions |
+| Identify required data | SKU, product name, quantity, price |
+| Explain user output | Classification, recommendation, explanation |
+| Show architecture placement | `AIInventoryAssistant` between inventory data and displayed result |
+| Prepare data | `InventorySystem` supplies `Product` objects |
+| AI/model step | `AIInventoryAssistant::analyzeProduct()` |
+| Receive result | `AIRecommendation` structure |
+| Validate result | `validateRecommendation()` |
+| Display result | `generateRestockRecommendations()` |
+| Build prototype | Working C++ mock AI prototype |
+
+---
+
+# 🤖 Selected AI Feature
+
+## AI Restock Recommendation Assistant
+
+The selected feature helps an inventory user decide which Products may need to
+be reordered.
+
+For each Product, the assistant returns:
+
+```text
+Classification
+Recommendation
+Explanation
+```
+
+Example:
+
+```text
+SKU: 1001
+Product: Brake Pads
+Quantity: 2
+AI Classification: CRITICAL
+Recommendation: Restock immediately
+Explanation: Inventory is extremely low and may run out soon.
+```
+
+The prototype demonstrates the same data flow that could later be connected to
+a real AI service.
+
+---
+
+# 🎯 What the Feature Does
+
+The AI Restock Recommendation Assistant answers the question:
+
+> Which inventory Products should receive attention or be restocked?
+
+The prototype currently classifies Products into four categories.
+
+| Quantity | Classification | Recommendation |
+|---:|---|---|
+| `0–2` | `CRITICAL` | Restock immediately |
+| `3–5` | `RESTOCK SOON` | Place a restock order soon |
+| `6–10` | `MONITOR` | Monitor inventory level |
+| `11+` | `HEALTHY` | No restock needed |
+
+These rules are used only to demonstrate the mock AI feature.
+
+A future real AI implementation could replace the rules with predictions based
+on historical inventory and sales information.
+
+---
+
+# 📊 Data the AI Feature Needs
+
+The current prototype receives information already stored by the Inventory
+Manager.
+
+The following Product fields are used:
+
+```text
+Product SKU
+Product Name
+Current Quantity
+Product Price
+```
+
+Example:
+
+```text
+SKU:       1005
+Product:   Air Filter
+Quantity:  4
+Price:     $14.49
 ```
 
 ---
 
-## Algorithms & Searching
+# 🔮 Data a Future AI Version Could Use
 
-The project now includes:
+A production AI feature could use additional information such as:
 
-- Sorted arrays
-- Unique identifiers
-- Sorted insertion
-- Binary search
-- Record lookup
-- Not-found handling
-- Record deletion
+- Historical sales
+- Daily or weekly demand
+- Previous restock dates
+- Supplier lead times
+- Seasonal demand
+- Product popularity
+- Inventory trends
+- Sales velocity
+- Purchase-order history
 
-Products are maintained in ascending SKU order so that binary search can
-be used correctly.
-
----
-
-## Data & File Processing
-
-The project includes experience with:
-
-- Arrays
-- Parallel arrays
-- Pointers
-- Memory addresses
-- External datasets
-- Kaggle datasets
-- CSV files
-- `ifstream`
-- `ofstream`
-- `getline()`
-- String parsing
-- `stoi()`
-- `stod()`
-- Text-file persistence
-- `inventory.txt`
-- Product records
-- Product objects
-- Dynamic Product arrays
-- Pointer access to dynamically allocated storage
+With this information, a model could potentially predict future demand instead
+of relying only on current quantity.
 
 ---
 
-## Input Validation & Data Protection
+# 👀 What the User Sees
 
-Module 8 adds a reusable validation layer before data is accepted by the
-Inventory Manager.
-
-The application now validates:
-
-- Role selections
-- Menu selections
-- Integer input
-- Decimal input
-- Numeric ranges
-- Required Product names
-- Product-name length
-- SKU uniqueness
-- `MM/DD/YYYY` date formatting
-- Real calendar dates
-- Leap years
-
-Invalid values are rejected with a useful message and the user is allowed
-to try again.
-
----
-
-## Midway Project Concepts
-
-The separate **Midway Project** builds on Modules 1–8 and demonstrates the
-required course concepts in one integrated Inventory Management System.
-
-It includes:
-
-- Data types and data sizes
-- Strings
-- Arrays
-- Pointers
-- Dynamic memory
-- Binary search
-- Classes
-- File I/O
-- Persistent `inventory.txt` storage
-- Input validation
-- Admin and Regular User permissions
-
-The Midway Project is stored separately in the repository under:
+The AI feature is available directly from the Inventory Manager menu.
 
 ```text
-Midterm/
+=============================================
+                 MAIN MENU
+=============================================
+1. View Inventory
+2. AI Restock Recommendations
+3. View AI Architecture
+4. Exit
+```
+
+Selecting:
+
+```text
+2. AI Restock Recommendations
+```
+
+displays a recommendation for every Product.
+
+Example:
+
+```text
+=============================================================
+             AI RESTOCK RECOMMENDATION ASSISTANT
+=============================================================
+
+SKU: 1005
+Product: Air Filter
+Quantity: 4
+AI Classification: RESTOCK SOON
+Recommendation: Place a restock order soon
+Explanation: Inventory is below the preferred stock level.
 ```
 
 ---
 
-## Security & Permissions
+# 🧠 AIRecommendation Result
 
-Module 7 introduces basic role-based authorization.
-
-The application now has:
-
-```text
-Admin
- ├── View Records
- ├── Search Records
- ├── Add Records
- └── Delete Records
-
-Regular User
- ├── View Records
- ├── Search Records
- ├── Add Records     ❌
- └── Delete Records  ❌
-```
-
-This demonstrates how applications can restrict functionality according
-to a user's assigned role.
-
----
-
-## Developer Workflow
-
-This repository documents the software-development workflow used
-throughout the course:
-
-- Git
-- GitHub
-- Repositories
-- Files and folders
-- Commits
-- Push
-- Version control
-- Compilation
-- Testing
-- Debugging
-- Revision
-- Documentation
-- Project organization
-- Public portfolio development
-
----
-
-# 📁 Repository Structure
-
-```text
-CPlusPlus-Application-Design/
-│
-├── README.md
-│
-├── Module01-Setup/
-│   ├── README.md
-│   └── setup_check.cpp
-│
-├── Module02-Variables/
-│   ├── README.md
-│   └── inventory_manager.cpp
-│
-├── Module03-Datasets-Arrays-Pointers/
-│   ├── README.md
-│   └── inventory_welcome.cpp
-│
-├── Module04-Functions-Headers/
-│   ├── README.md
-│   ├── inventory_dataset.cpp
-│   └── data/
-│       └── SuperMarket Analysis.csv
-│
-├── Module05-Classes-Objects/
-│   ├── README.md
-│   ├── main.cpp
-│   ├── InventoryTools.h
-│   └── InventoryTools.cpp
-│
-├── Module06-Records-Storage/
-│   ├── README.md
-│   ├── main.cpp
-│   ├── Product.h
-│   └── Product.cpp
-│
-├── Module07-Security-Search/
-│   ├── README.md
-│   ├── main.cpp
-│   ├── Product.h
-│   ├── Product.cpp
-│   ├── User.h
-│   ├── User.cpp
-│   ├── InventorySystem.h
-│   └── InventorySystem.cpp
-│
-├── Module08-Input-Validation/
-│   ├── README.md
-│   ├── main.cpp
-│   ├── Product.h
-│   ├── Product.cpp
-│   ├── User.h
-│   ├── User.cpp
-│   ├── InventorySystem.h
-│   ├── InventorySystem.cpp
-│   ├── InputValidator.h
-│   └── InputValidator.cpp
-│
-├── Midterm/
-│   ├── README.md
-│   ├── main.cpp
-│   ├── Product.h
-│   ├── Product.cpp
-│   ├── User.h
-│   ├── User.cpp
-│   ├── InventorySystem.h
-│   ├── InventorySystem.cpp
-│   ├── InputValidator.h
-│   ├── InputValidator.cpp
-│   ├── inventory.txt
-│   └── output.pdf
-│
-├── Module09-AI-Application/
-├── Module10-Future-of-AI/
-├── Module11-Application-Showcase/
-├── Module12-Cpp-and-AI/
-├── Module13-Careers-Mini-Project/
-├── Module14-AI-Agents/
-└── Module15-Resources/
-```
-
-> **Note:** Module directory names were created during the original
-> repository setup and are retained for organizational consistency.
-> Each module README documents the actual assignment title and concepts
-> covered.
-
----
-
-# 📚 Module Progress
-
-| Module | Actual Assignment Topic | Status |
-|:---:|---|:---:|
-| 01 | [Development Environment & GitHub](./Module01-Setup/) | ✅ Complete |
-| 02 | [Menus, Switch Case & Application Flow](./Module02-Variables/) | ✅ Complete |
-| 03 | [Variables, Cin & Cout](./Module03-Datasets-Arrays-Pointers/) | ✅ Complete |
-| 04 | [Datasets, Arrays & Pointers](./Module04-Functions-Headers/) | 🔄 Revised / Resubmitted |
-| 05 | [Records, Headers & Functions](./Module05-Classes-Objects/) | ✅ Complete |
-| 06 | [Creating Classes & Objects](./Module06-Records-Storage/) | ✅ Complete |
-| 07 | [Security, Roles & Binary Search](./Module07-Security-Search/) | ✅ Complete |
-| 08 | [Input Validation & Protecting Data](./Module08-Input-Validation/) | ✅ Complete |
-| 09 | AI Application | ⏳ Upcoming |
-| 10 | Future of AI | ⏳ Upcoming |
-| 11 | Application Showcase | ⏳ Upcoming |
-| 12 | C++ and AI | ⏳ Upcoming |
-| 13 | Careers & Mini Project | ⏳ Upcoming |
-| 14 | AI Agents | ⏳ Upcoming |
-| 15 | Resources | ⏳ Upcoming |
-
----
-
-# ✅ Completed & Revised Modules
-
-## Module 01 — Development Environment Setup
-
-Module 1 established the development environment and GitHub workflow used
-throughout the course.
-
-### Completed
-
-- [x] Public GitHub repository created
-- [x] C++ development environment prepared
-- [x] Repository organized
-- [x] Original C++ test program created
-- [x] Program compiled successfully
-- [x] Program tested successfully
-- [x] GitHub workflow practiced
-
-➡️ **[View Module 01](./Module01-Setup/)**
-
----
-
-## Module 02 — Menus, Switch Case & Application Flow
-
-Module 2 established the Inventory Manager's menu and application flow.
-
-```text
-Menu
-  │
-  ▼
-User Choice
-  │
-  ▼
-Input Validation
-  │
-  ▼
-switch/case
-  │
-  ▼
-Function
-  │
-  ▼
-Return to Menu
-```
-
-### Completed
-
-- [x] Command-line menu created
-- [x] Multiple menu options included
-- [x] Loop implemented
-- [x] `switch/case` implemented
-- [x] Functions created
-- [x] Invalid input handled
-- [x] Program compiled successfully
-- [x] Program tested successfully
-
-➡️ **[View Module 02](./Module02-Variables/)**
-
----
-
-## Module 03 — Variables, Cin & Cout
-
-Module 3 introduced variables and fundamental C++ data types.
-
-The completed program uses:
-
-```text
-7 Variables
-5 Different Data Types
-```
-
-Including:
-
-```text
-string
-int
-double
-char
-bool
-```
-
-### Completed
-
-- [x] Personalized welcome screen created
-- [x] User input captured
-- [x] Application information stored
-- [x] Multiple C++ data types used
-- [x] Every variable displayed
-- [x] Program compiled successfully
-- [x] Program tested successfully
-
-➡️ **[View Module 03](./Module03-Datasets-Arrays-Pointers/)**
-
----
-
-# 🔄 Module 04 — Datasets, Arrays & Pointers
-
-Module 4 introduced working with external real-world data.
-
-A public **Supermarket Sales Dataset** was downloaded from Kaggle.
-
-The original CSV is included at:
-
-```text
-Module04-Functions-Headers/data/SuperMarket Analysis.csv
-```
-
-The revised program opens the downloaded CSV directly.
-
----
-
-## Module 04 Data Flow
-
-```text
-Kaggle
-   │
-   ▼
-Download CSV
-   │
-   ▼
-C++ File Input
-   │
-   ▼
-Read Records
-   │
-   ▼
-Select Fields
-   │
-   ▼
-Arrays
-   │
-   ▼
-Pointer Access
-```
-
-Three fields are used:
-
-```text
-Product Line
-Unit Price
-Quantity
-```
-
-Seven records are selected.
-
-### Revision Status
-
-```text
-Original Grade:  2 / 10
-Revision:        Completed
-CSV Included:    Yes
-CSV Parsing:     Implemented
-Arrays:          Implemented
-Pointers:        Implemented
-Status:          Awaiting Regrade
-```
-
-➡️ **[View Revised Module 04](./Module04-Functions-Headers/)**
-
----
-
-## Module 05 — Records, Headers & Functions
-
-Module 5 expanded the Inventory Manager into a multi-file application.
-
-Inventory records are represented using:
+The prototype stores the AI-style result in a structure.
 
 ```cpp
-struct InventoryRecord
+struct AIRecommendation
 {
-    std::string itemName;
-    int quantity;
-    double price;
+    std::string classification;
+    std::string recommendation;
+    std::string explanation;
 };
 ```
 
-The module introduced:
+This creates a clear interface between the AI component and the rest of the
+application.
 
-```text
-main.cpp
-InventoryTools.h
-InventoryTools.cpp
-```
-
-Functions include:
-
-```cpp
-addRecord()
-displayRecords()
-calculateInventoryValue()
-```
-
-### Completed
-
-- [x] Inventory record created
-- [x] Add function created
-- [x] Display function created
-- [x] Calculation function created
-- [x] Custom header created
-- [x] Function declarations separated
-- [x] Function implementations separated
-- [x] Program compiled successfully
-- [x] Program tested successfully
-
-➡️ **[View Module 05](./Module05-Classes-Objects/)**
+A future live AI service could return similar fields.
 
 ---
 
-# ✅ Module 06 — Creating Classes & Objects
+# 🏗️ AIInventoryAssistant Class
 
-Module 6 introduced object-oriented programming.
-
-The application now contains a `Product` class with:
+The AI feature is isolated inside its own class.
 
 ```cpp
+class AIInventoryAssistant
+{
 private:
-    std::string name;
-    int sku;
-    int quantity;
-    double price;
+    bool validateRecommendation(
+        const AIRecommendation& result
+    ) const;
+
+public:
+    AIRecommendation analyzeProduct(
+        const Product& product
+    ) const;
+
+    void generateRestockRecommendations(
+        const InventorySystem& inventory
+    ) const;
+
+    void showArchitecture() const;
+};
 ```
 
-The class demonstrates:
-
-- Private data members
-- Constructor
-- Member functions
-- Getters
-- Setters
-- Encapsulation
-- The `this` pointer
-- Object life cycles
-
-Two Product objects are created:
-
-```cpp
-Product product1(
-    "Brake Pads",
-    1001,
-    5,
-    39.99
-);
-
-Product product2(
-    "Oil Filter",
-    1002,
-    10,
-    8.99
-);
-```
-
-The application also reinforces `main()` as the application coordinator:
-
-```cpp
-int main()
-{
-    showWelcome();
-    showMenu();
-    demonstrateProducts();
-
-    return 0;
-}
-```
-
-### Completed
-
-- [x] Product class created
-- [x] Private members created
-- [x] Constructor created
-- [x] Member functions created
-- [x] Getters created
-- [x] Setters created
-- [x] Encapsulation demonstrated
-- [x] `this` pointer demonstrated
-- [x] Two objects created
-- [x] Three functions called from `main()`
-- [x] Program compiled successfully
-- [x] Program tested successfully
-
-➡️ **[View Module 06](./Module06-Records-Storage/)**
+This keeps AI-related logic separate from Product storage and the main
+application flow.
 
 ---
 
-# ✅ Module 07 — Security, Roles & Binary Search
+# 🔬 Mock AI Analysis
 
-Module 7 introduces application permissions and algorithm-based searching.
+The mock prototype uses Product quantity to generate a recommendation.
 
-The Inventory Manager now supports two user roles:
+```cpp
+if (product.getQuantity() <= 2)
+{
+    result.classification = "CRITICAL";
+    result.recommendation = "Restock immediately";
+}
+else if (product.getQuantity() <= 5)
+{
+    result.classification = "RESTOCK SOON";
+    result.recommendation = "Place a restock order soon";
+}
+else if (product.getQuantity() <= 10)
+{
+    result.classification = "MONITOR";
+    result.recommendation = "Monitor inventory level";
+}
+else
+{
+    result.classification = "HEALTHY";
+    result.recommendation = "No restock needed";
+}
+```
+
+This is a deterministic prototype rather than a trained AI model.
+
+Its purpose is to demonstrate:
 
 ```text
-Admin
-Regular User
-```
-
-The application uses inheritance, access modifiers, role-based
-authorization, sorted product records, and binary search.
-
----
-
-## 👤 User Hierarchy
-
-The application uses a common `User` base class:
-
-```text
-              User
-               │
-       ┌───────┴───────┐
-       │               │
-       ▼               ▼
-     Admin        RegularUser
-```
-
-The base class defines a common permission interface.
-
----
-
-# 👑 Admin Role
-
-The Admin role has permission to:
-
-```text
-View Records       ✅
-Search Records     ✅
-Add Records        ✅
-Delete Records     ✅
-```
-
-The Admin class inherits from `User`:
-
-```cpp
-class Admin : public User
-```
-
-Admin permissions are implemented using:
-
-```cpp
-bool Admin::canView() const
-{
-    return true;
-}
-
-bool Admin::canAdd() const
-{
-    return true;
-}
-
-bool Admin::canDelete() const
-{
-    return true;
-}
+Application Data
+      │
+      ▼
+AI Component
+      │
+      ▼
+Structured Result
+      │
+      ▼
+Result Validation
+      │
+      ▼
+User Recommendation
 ```
 
 ---
 
-# 👤 Regular User Role
+# ✅ AI Result Validation
 
-The Regular User has permission to:
+The conceptual architecture for Module 9 includes validating the result before
+presenting it to the user.
 
-```text
-View Records       ✅
-Search Records     ✅
-Add Records        ❌
-Delete Records     ❌
-```
-
-The class inherits from `User`:
+The prototype implements this with:
 
 ```cpp
-class RegularUser : public User
-```
-
-Its permissions are:
-
-```cpp
-bool RegularUser::canView() const
-{
-    return true;
-}
-
-bool RegularUser::canAdd() const
-{
-    return false;
-}
-
-bool RegularUser::canDelete() const
-{
-    return false;
-}
-```
-
----
-
-# 🔐 Role-Based Authorization
-
-Before protected actions are performed, the application checks the
-current user's role permissions.
-
-For example:
-
-```cpp
-if (!currentUser.canAdd())
-{
-    std::cout
-        << "Access denied: Regular Users cannot add records.\n";
-
-    break;
-}
-```
-
-Delete permission is checked the same way.
-
-This demonstrates basic application authorization.
-
----
-
-# 🔒 Access Modifiers
-
-Module 7 demonstrates:
-
-### `private`
-
-Used for Product and InventorySystem data.
-
-```cpp
-private:
-    int sku;
-    std::string name;
-    int quantity;
-    double price;
-```
-
-### `protected`
-
-Used by the `User` base class:
-
-```cpp
-protected:
-    std::string username;
-```
-
-### `public`
-
-Used for constructors, getters, role functions, and application
-operations.
-
----
-
-# 📦 Sorted Product Records
-
-Products are stored in ascending order according to SKU.
-
-Initial records:
-
-```text
-1001 — Brake Pads
-1002 — Oil Filter
-1005 — Air Filter
-1010 — Spark Plugs
-```
-
-If the Admin adds:
-
-```text
-1003 — Engine Cleaner
-```
-
-the Inventory Manager inserts it in the correct position:
-
-```text
-1001 — Brake Pads
-1002 — Oil Filter
-1003 — Engine Cleaner
-1005 — Air Filter
-1010 — Spark Plugs
-```
-
-This maintains the ordering required for binary search.
-
----
-
-# ➕ Sorted Insertion
-
-The Inventory Manager determines the correct insertion point:
-
-```cpp
-int insertIndex = 0;
-
-while (
-    insertIndex < productCount &&
-    products[insertIndex].getSku()
-        < product.getSku()
-)
-{
-    insertIndex++;
-}
-```
-
-Existing elements are shifted:
-
-```cpp
-for (
-    int i = productCount;
-    i > insertIndex;
-    i--
-)
-{
-    products[i] =
-        products[i - 1];
-}
-```
-
-The new record is inserted into its sorted position.
-
----
-
-# 🔍 Binary Search
-
-The application searches for products using:
-
-```cpp
-binarySearchBySku()
-```
-
-Implementation:
-
-```cpp
-int InventorySystem::binarySearchBySku(
-    int targetSku
+bool AIInventoryAssistant::validateRecommendation(
+    const AIRecommendation& result
 ) const
-{
-    int left = 0;
-    int right = productCount - 1;
-
-    while (left <= right)
-    {
-        int mid =
-            left +
-            (right - left) / 2;
-
-        int middleSku =
-            products[mid].getSku();
-
-        if (middleSku == targetSku)
-        {
-            return mid;
-        }
-
-        if (middleSku < targetSku)
-        {
-            left = mid + 1;
-        }
-        else
-        {
-            right = mid - 1;
-        }
-    }
-
-    return -1;
-}
 ```
 
-The SKU serves as the product's unique searchable identifier.
+The function verifies that:
+
+- The classification is an expected category.
+- The recommendation is not empty.
+- The explanation is not empty.
+
+Expected classifications are:
+
+```text
+CRITICAL
+RESTOCK SOON
+MONITOR
+HEALTHY
+```
+
+If a result does not pass validation, it is not displayed as a valid
+recommendation.
+
+This demonstrates an important future AI integration rule:
+
+> AI output should be checked before the application trusts or displays it.
 
 ---
 
-# 🔎 Binary Search Example
+# 🧩 AI Architecture
 
-Searching for:
-
-```text
-1005
-```
-
-returns:
+The prototype follows the Module 9 conceptual flow.
 
 ```text
-Product found using binary search:
-
-SKU       Product                  Quantity    Price
-----------------------------------------------------------
-1005      Air Filter               7           $14.49
-```
-
-Searching for:
-
-```text
-9999
-```
-
-returns:
-
-```text
-No product found with SKU 9999.
+C++ Inventory Manager
+        │
+        ▼
+User Request
+        │
+        ▼
+Prepare Inventory Data
+        │
+        ▼
+AIInventoryAssistant
+Mock AI / Future AI Service
+        │
+        ▼
+Receive AIRecommendation
+        │
+        ▼
+Validate Result
+        │
+        ▼
+Display Recommendation
 ```
 
 ---
 
-# 🖥️ Module 07 Menu
+# 🔌 Where AI Fits in the Application
 
-```text
-========================================
-             INVENTORY MENU
-========================================
-1. View Records
-2. Search Record by SKU
-3. Add Record
-4. Delete Record
-5. Exit
-```
+The existing application already contains Product data and an InventorySystem.
 
-The options are displayed to both roles, but permissions determine which
-actions can actually be performed.
-
----
-
-# 🧩 Module 07 Architecture
+Module 9 adds an AI layer:
 
 ```text
                      INVENTORY MANAGER
                             │
-             ┌──────────────┼──────────────┐
-             │              │              │
-             ▼              ▼              ▼
-          Product          User       InventorySystem
-             │              │              │
-             │       ┌──────┴──────┐       │
-             │       │             │       │
-             ▼       ▼             ▼       ▼
-          Records  Admin     RegularUser  Sorted Array
-                                            │
-                                            ▼
-                                       Binary Search
+             ┌──────────────┴──────────────┐
+             │                             │
+             ▼                             ▼
+       InventorySystem              User Interface
+             │
+             ▼
+        Product Data
+             │
+             ▼
+     AIInventoryAssistant
+             │
+             ▼
+       AIRecommendation
+             │
+             ▼
+      Validate AI Result
+             │
+             ▼
+        Display Result
 ```
+
+The AI component does not replace the inventory application. It uses the data
+already stored by the Inventory Manager to provide an additional feature.
 
 ---
 
-# 🔀 Module 07 Application Flow
+# 🔄 Future Live AI Architecture
+
+A future production version could replace the mock analysis with an external
+AI service or trained model.
 
 ```text
-                   Program Starts
-                         │
-                         ▼
-                       main()
-                         │
-                         ▼
-                  Create Inventory
-                         │
-                         ▼
-                   Seed Products
-                         │
-                         ▼
-                  Create User Roles
-                         │
-              ┌──────────┴──────────┐
-              │                     │
-              ▼                     ▼
-            Admin              RegularUser
-              │                     │
-              └──────────┬──────────┘
-                         │
-                         ▼
-                    Choose Role
-                         │
-                         ▼
-                  Application Menu
-                         │
-        ┌────────────────┼────────────────┐
-        │                │                │
-        ▼                ▼                ▼
-       View            Search           Modify
-        │                │                │
-        ▼                ▼                ▼
-Permission Check   Binary Search   Permission Check
-                                          │
-                                   ┌──────┴──────┐
-                                   │             │
-                                   ▼             ▼
-                                  Add          Delete
+C++ Inventory Manager
+        │
+        ▼
+Prepare Product Data
+        │
+        ▼
+Create AI Request
+        │
+        ▼
+AI Service / Model
+        │
+        ▼
+Receive Response
+        │
+        ▼
+Parse Response
+        │
+        ▼
+Validate Response
+        │
+        ▼
+Display Recommendation
 ```
 
----
-
-# 🧪 Module 07 Testing
-
-The Admin role was tested to verify:
-
-- Records can be viewed
-- Existing SKUs can be searched
-- Missing SKUs return not found
-- New products can be added
-- New products remain sorted by SKU
-- Newly added products can be found using binary search
-- Products can be deleted
-- Deleted products are removed
-- Application exits normally
-
-The Regular User role was tested to verify:
-
-- Records can be viewed
-- Records can be searched
-- Add attempts are denied
-- Delete attempts are denied
-- Application exits normally
+The rest of the Inventory Manager could remain largely unchanged.
 
 ---
 
-# ✅ Module 07 Requirements
+# ⚠️ Prototype vs. Live AI
 
-| Assignment Requirement | Implementation |
-|---|---|
-| Admin role | `Admin` |
-| Regular User role | `RegularUser` |
-| Admin can add | ✅ |
-| Admin can view | ✅ |
-| Admin can delete | ✅ |
-| Regular User can view | ✅ |
-| Regular User cannot add | ✅ |
-| Regular User cannot delete | ✅ |
-| Sorted records | SKU ascending |
-| Binary search | `binarySearchBySku()` |
-| Unique search field | SKU |
-| Inheritance | `Admin` / `RegularUser` → `User` |
-| Access modifiers | `private`, `protected`, `public` |
+This project intentionally uses a mock prototype.
 
-### Completed
-
-- [x] User base class created
-- [x] Admin role created
-- [x] Regular User role created
-- [x] Admin can view records
-- [x] Admin can search records
-- [x] Admin can add records
-- [x] Admin can delete records
-- [x] Regular User can view records
-- [x] Regular User can search records
-- [x] Regular User cannot add records
-- [x] Regular User cannot delete records
-- [x] Permission checks implemented
-- [x] Inheritance demonstrated
-- [x] Access modifiers demonstrated
-- [x] SKU used as unique field
-- [x] Records maintained in sorted order
-- [x] Sorted insertion implemented
-- [x] Binary search implemented
-- [x] Missing records handled
-- [x] Program compiled successfully
-- [x] Admin role fully tested
-- [x] Regular User role fully tested
-- [x] Module 7 uploaded to GitHub
-- [x] Module 7 completed
-
-➡️ **[View Module 07](./Module07-Security-Search/)**
-
----
-
-# ✅ Module 08 — Input Validation & Protecting Data
-
-Module 8 adds a reusable validation layer to the Inventory Manager.
-
-The application no longer assumes that user input is valid. Values are checked
-before they are accepted or stored.
-
-Validation now covers:
+## Current Module 9 Prototype
 
 ```text
-Type
-Range
-Required Fields
-Unique IDs
-Date Format
-Calendar Dates
-Leap Years
+C++ Rules
+    │
+    ▼
+Classification
+    │
+    ▼
+Recommendation
 ```
 
-The module introduces the `InputValidator` class:
+## Possible Future Version
+
+```text
+Inventory History
+        │
+        ▼
+AI Model / Service
+        │
+        ▼
+Demand Prediction
+        │
+        ▼
+Restock Recommendation
+```
+
+The prototype requires no:
+
+- API key
+- Internet connection
+- Paid AI service
+- Hosted machine-learning model
+
+This keeps the assignment reproducible and self-contained.
+
+---
+
+# 📦 Product Class
+
+Inventory information is represented using the `Product` class.
 
 ```cpp
-class InputValidator
+class Product
 {
+private:
+    int sku;
+    std::string name;
+    int quantity;
+    double price;
+
 public:
-    static int getIntInRange(...);
-    static double getDoubleInRange(...);
-    static std::string getRequiredString(...);
-    static std::string getDateMMDDYYYY(...);
-    static bool isValidDate(...);
+    Product();
+    Product(
+        int sku,
+        const std::string& name,
+        int quantity,
+        double price
+    );
+
+    int getSku() const;
+    std::string getName() const;
+    int getQuantity() const;
+    double getPrice() const;
 };
 ```
 
-Product records also include a validated date:
-
-```cpp
-std::string dateAdded;
-```
-
-### Validation Examples
-
-The application rejects:
-
-```text
-Negative SKU values
-Negative quantities
-Invalid prices
-Empty Product names
-Whitespace-only names
-Duplicate SKUs
-Incorrect date formats
-Impossible calendar dates
-Invalid leap-year dates
-Nonnumeric menu input
-Out-of-range menu choices
-```
-
-Each invalid entry produces a useful error message and allows the user to try
-again.
-
-### Existing Features Preserved
-
-Module 8 keeps the functionality from Module 7:
-
-- [x] Admin permissions
-- [x] Regular User restrictions
-- [x] Sorted Product records
-- [x] Sorted insertion
-- [x] Binary search
-- [x] Record deletion
-- [x] Multi-file application design
-
-### Completed
-
-- [x] InputValidator class created
-- [x] Integer validation implemented
-- [x] Decimal validation implemented
-- [x] Range validation implemented
-- [x] Required-field validation implemented
-- [x] Empty names rejected
-- [x] Negative values rejected where invalid
-- [x] Duplicate SKU protection implemented
-- [x] Date-format validation implemented
-- [x] Calendar-date validation implemented
-- [x] Leap-year validation implemented
-- [x] Retry loops implemented
-- [x] Helpful error messages implemented
-- [x] Program compiled successfully
-- [x] Admin workflow tested successfully
-- [x] Regular User workflow tested successfully
-- [x] Module 8 uploaded to GitHub
-- [x] Module 8 completed
-
-➡️ **[View Module 08](./Module08-Input-Validation/)**
+The Product class supplies the information analyzed by the AI prototype.
 
 ---
 
-# 🎓 Midway Project — Inventory Management System
+# 🗃️ InventorySystem
 
-The Midway Project is a separate project milestone that combines the C++
-concepts introduced throughout the first half of the course into one complete
-Inventory Management System.
+`InventorySystem` stores the Product objects used in the prototype.
 
-It is stored in:
+Sample inventory:
 
 ```text
-Midterm/
+1001 — Brake Pads       — Quantity 2
+1002 — Oil Filter       — Quantity 10
+1005 — Air Filter       — Quantity 4
+1010 — Spark Plugs      — Quantity 15
+1015 — Engine Cleaner   — Quantity 7
 ```
 
-The Midway version builds on the Inventory Manager developed in Modules 1–8
-while adding persistent file storage and dynamic memory.
-
-## Required Concepts Demonstrated
-
-| Required Concept | Midway Implementation |
-|---|---|
-| Data types and data sizes | Multiple C++ types + `sizeof()` demonstration |
-| File type | `inventory.txt` |
-| Pointers | Pointer access to dynamically allocated Product storage |
-| Arrays | Product collection |
-| Search algorithm | Binary search by SKU |
-| Strings | Product names, dates, usernames |
-| File I/O | `ifstream` / `ofstream` |
-| At least two classes | `Product`, `InventorySystem`, `User`, `InputValidator` |
-| Dynamic memory | `new[]` / `delete[]` |
-
-## Midway Features
-
-The completed project includes:
-
-- Admin and Regular User roles
-- Role-based authorization
-- Add Product
-- View Products
-- Search Products
-- Delete Products
-- Sorted insertion by SKU
-- Binary search
-- Duplicate SKU protection
-- Input validation
-- Date validation
-- Dynamic Product storage
-- Pointer demonstration
-- Data-size demonstration
-- Text-file loading
-- Text-file saving
-- Persistent inventory data
-
-## Persistent Storage
-
-The Midway Project uses:
-
-```text
-inventory.txt
-```
-
-Inventory records are loaded from the file and saved back to disk so the
-application can preserve data between program runs.
-
-## Dynamic Memory
-
-The Product collection is dynamically allocated and accessed through a
-pointer.
-
-This demonstrates:
-
-```text
-Product*
-new[]
-delete[]
-Pointer Access
-Dynamic Array Storage
-```
-
-## Midway Report
-
-The Midway folder also contains:
-
-```text
-output.pdf
-```
-
-The report documents:
-
-- What the program does
-- How the program works
-- Required C++ concepts
-- Program architecture
-- Compilation/testing results
-- Screenshots of the running application
-
-### Completed
-
-- [x] Midway Inventory Management System built
-- [x] Required C++ concepts implemented
-- [x] Dynamic memory implemented
-- [x] Pointer demonstration implemented
-- [x] Binary search implemented
-- [x] File I/O implemented
-- [x] Persistent text-file storage implemented
-- [x] Multiple classes implemented
-- [x] Input validation integrated
-- [x] Role permissions integrated
-- [x] Project compiled successfully
-- [x] Admin workflow tested
-- [x] Regular User workflow tested
-- [x] File save/load tested
-- [x] `output.pdf` created
-- [x] Midway Project completed
-
-➡️ **[View Midway Project](./Midterm/)**
+The sample quantities intentionally represent several inventory conditions so
+all recommendation classifications can be demonstrated.
 
 ---
 
-# 🧩 Current Application Architecture
+# 🧪 Example AI Results
 
-After eight modules and the Midway milestone, the Inventory Manager has
-progressed from a basic console program into a modular application with
-validation, role-based permissions, searching, and persistent storage.
+## Critical
 
 ```text
-                         INVENTORY MANAGER
-                                │
-       ┌────────────────────────┼────────────────────────┐
-       │                        │                        │
-       ▼                        ▼                        ▼
-      User                   Product              InputValidator
-       │                        │                        │
- ┌─────┴─────┐                  │              ┌─────────┼─────────┐
- │           │                  │              │         │         │
- ▼           ▼                  ▼              ▼         ▼         ▼
-Admin   RegularUser        Product Data       Type      Range     Format
- │           │                  │                        │
- └─────┬─────┘                  └──────────────┬─────────┘
-       │                                      │
-       ▼                                      ▼
- Authorization                         InventorySystem
-                                              │
-                       ┌──────────────────────┼──────────────────────┐
-                       │                      │                      │
-                       ▼                      ▼                      ▼
-                 Sorted Records         Binary Search         File I/O
-                       │                                         │
-                       ▼                                         ▼
-                Dynamic Storage                           inventory.txt
-                       │
-                       ▼
-                    Product*
+SKU: 1001
+Product: Brake Pads
+Quantity: 2
+AI Classification: CRITICAL
+Recommendation: Restock immediately
+Explanation: Inventory is extremely low and may run out soon.
 ```
 
-The standard Module 8 version focuses on validation. The separate Midway
-Project extends the same architecture with dynamic memory and persistent
-file storage.
+## Restock Soon
+
+```text
+SKU: 1005
+Product: Air Filter
+Quantity: 4
+AI Classification: RESTOCK SOON
+Recommendation: Place a restock order soon
+Explanation: Inventory is below the preferred stock level.
+```
+
+## Monitor
+
+```text
+SKU: 1015
+Product: Engine Cleaner
+Quantity: 7
+AI Classification: MONITOR
+Recommendation: Monitor inventory level
+Explanation: Inventory is acceptable but should be watched.
+```
+
+## Healthy
+
+```text
+SKU: 1010
+Product: Spark Plugs
+Quantity: 15
+AI Classification: HEALTHY
+Recommendation: No restock needed
+Explanation: Current inventory appears sufficient.
+```
 
 ---
 
-# 📈 Application Evolution
+# 🖥️ Application Menu
+
+```text
+=============================================
+                 MAIN MENU
+=============================================
+1. View Inventory
+2. AI Restock Recommendations
+3. View AI Architecture
+4. Exit
+```
+
+### Option 1 — View Inventory
+
+Displays the Product records.
+
+### Option 2 — AI Restock Recommendations
+
+Runs the mock AI analysis and displays recommendations.
+
+### Option 3 — View AI Architecture
+
+Displays the data requirements and explains where the AI component fits in the
+application.
+
+### Option 4 — Exit
+
+Closes the application.
+
+---
+
+# 🔄 Application Flow
+
+```text
+                    Program Starts
+                          │
+                          ▼
+                        main()
+                          │
+                          ▼
+                 Create InventorySystem
+                          │
+                          ▼
+                    Seed Product Data
+                          │
+                          ▼
+              Create AIInventoryAssistant
+                          │
+                          ▼
+                       Main Menu
+                          │
+          ┌───────────────┼──────────────────┐
+          │               │                  │
+          ▼               ▼                  ▼
+     View Inventory   AI Recommendations   Architecture
+                          │
+                          ▼
+                  Prepare Product Data
+                          │
+                          ▼
+                     Analyze Product
+                          │
+                          ▼
+                 AIRecommendation Result
+                          │
+                          ▼
+                    Validate Result
+                          │
+                          ▼
+                   Display to User
+```
+
+---
+
+# 🔗 Connection to Previous Modules
+
+Module 9 continues the progression of the Inventory Manager.
 
 ```text
 Module 01
@@ -1503,269 +679,191 @@ Menus & Application Flow
         │
         ▼
 Module 03
-Variables & Data Types
+Variables & Input/Output
         │
         ▼
 Module 04
-External Dataset
-CSV → Arrays → Pointers
+Datasets, Arrays & Pointers
         │
         ▼
 Module 05
-Records
-Headers
-Functions
+Records, Headers & Functions
         │
         ▼
 Module 06
-Classes
-Objects
-Encapsulation
+Classes & Objects
         │
         ▼
 Module 07
-Roles
-Permissions
-Inheritance
-Sorted Records
-Binary Search
+Security, Roles & Binary Search
         │
         ▼
 Module 08
-Input Validation
-Required Fields
-Ranges
-Dates
-Duplicate Protection
+Input Validation & Protecting Data
         │
         ▼
-Midway Project
-Dynamic Memory
-Pointers
-File I/O
-Persistent Storage
-        │
-        ▼
-Future Modules
-Databases
-AI
-Application Showcase
+Module 09
+AI Application Feature
 ```
+
+The project has progressed from storing and protecting inventory data to using
+that data as input for an AI-oriented feature.
 
 ---
 
-# 🔗 Data & Design Progression
+# 📁 Module Files
 
 ```text
-Variable
-   │
-   ▼
-Array
-   │
-   ▼
-Record
-   │
-   ▼
-Functions
-   │
-   ▼
-Class
-   │
-   ▼
-Object
-   │
-   ▼
-Collection of Objects
-   │
-   ▼
-Sorted Records
-   │
-   ▼
-Binary Search
-   │
-   ▼
-Role-Based Access
-   │
-   ▼
-Input Validation
-   │
-   ▼
-Dynamic Memory
-   │
-   ▼
-File I/O
-   │
-   ▼
-Persistent Storage
-   │
-   ▼
-Complete Inventory System
+Module09-AI-Application/
+│
+├── README.md
+├── main.cpp
+├── Product.h
+├── Product.cpp
+├── InventorySystem.h
+├── InventorySystem.cpp
+├── AIInventoryAssistant.h
+└── AIInventoryAssistant.cpp
 ```
 
----
+### `main.cpp`
 
-# 🔄 Development Workflow
+Contains:
 
-```text
-Plan
-  │
-  ▼
-Write Code
-  │
-  ▼
-Compile
-  │
-  ▼
-Test
-  │
-  ▼
-Review
-  │
-  ▼
-Debug
-  │
-  ▼
-Improve / Revise
-  │
-  ▼
-Commit
-  │
-  ▼
-Push
-  │
-  ▼
-Verify on GitHub
-  │
-  ▼
-Document
-```
+- Program entry point
+- Main menu
+- Menu validation
+- Inventory display option
+- AI recommendation option
+- AI architecture option
 
-Typical Git workflow:
+### `Product.h` / `Product.cpp`
 
-```bash
-git add .
-git commit -m "Complete Module 8 and Midway Project"
-git push
-```
+Contain:
+
+- Product class
+- SKU
+- Product name
+- Quantity
+- Price
+- Getters
+
+### `InventorySystem.h` / `InventorySystem.cpp`
+
+Contain:
+
+- Product array
+- Sample data
+- Inventory display
+- Product access for AI analysis
+
+### `AIInventoryAssistant.h` / `AIInventoryAssistant.cpp`
+
+Contain:
+
+- AI mock prototype
+- Recommendation classifications
+- `AIRecommendation`
+- Result validation
+- Recommendation display
+- Architecture explanation
 
 ---
 
 # 🧪 Testing
 
-Each module is tested before being considered complete.
+Module 9 was tested successfully after upload, including the menu, inventory display, AI recommendations, architecture display, invalid input handling, and normal program exit.
 
-The project has now been tested for:
+The exact Module 9 source was compiled with warnings enabled and tested.
+
+## Build Tests
+
+- [x] `main.cpp` compiles
+- [x] `Product.cpp` compiles
+- [x] `InventorySystem.cpp` compiles
+- [x] `AIInventoryAssistant.cpp` compiles
+- [x] Multi-file application links successfully
+- [x] No runtime errors during test flow
+
+## Menu Tests
+
+- [x] Inventory option displays Product records
+- [x] AI Recommendation option runs successfully
+- [x] Architecture option displays successfully
+- [x] Exit option closes normally
+- [x] Nonnumeric menu input is rejected
+- [x] Out-of-range menu input is rejected
+- [x] User can retry invalid menu input
+
+## AI Prototype Tests
+
+- [x] Quantity `2` returns `CRITICAL`
+- [x] Quantity `4` returns `RESTOCK SOON`
+- [x] Quantity `7` returns `MONITOR`
+- [x] Quantity `10` returns `MONITOR`
+- [x] Quantity `15` returns `HEALTHY`
+- [x] Recommendation text displays
+- [x] Explanation text displays
+- [x] Results are validated before display
+
+---
+
+# ✅ Module 9 Checklist
+
+- [x] One AI-powered feature selected
+- [x] AI feature connected to Inventory Manager
+- [x] Feature purpose documented
+- [x] Required data documented
+- [x] User-visible output documented
+- [x] AI location in application architecture documented
+- [x] Mock AI prototype created
+- [x] `AIInventoryAssistant` class created
+- [x] `AIRecommendation` structure created
+- [x] Product data prepared for analysis
+- [x] Mock recommendation logic implemented
+- [x] AI result validation implemented
+- [x] Results displayed to user
+- [x] Future live-AI architecture documented
+- [x] Prototype limitations clearly identified
+- [x] Multi-file program compiled successfully
+- [x] Invalid menu input tested
+- [x] Recommendation categories tested
+- [x] Module 9 files uploaded to GitHub
+- [x] Module 9 completed in repository
+
+---
+
+
+# 🎉 Module 9 Status
 
 ```text
-Compilation
-User Input
-Invalid Input
-Application Flow
-CSV Loading
-Array Processing
-Pointer Access
-Record Creation
-Calculations
-Multi-File Compilation
-Class Construction
-Object Creation
-Getters
-Setters
-Encapsulation
-Inheritance
-Permissions
-Sorted Insertion
-Binary Search
-Record Deletion
-Input Type Validation
-Range Validation
-Required Fields
-Date Validation
-Duplicate SKU Protection
-Dynamic Memory
-Pointer Access
-File Loading
-File Saving
-Persistent Storage
-Data Size Demonstration
-Runtime Behavior
+Module:                 09
+Topic:                  Using AI to Expand Your Application
+
+Feature:                AI Restock Recommendation Assistant
+Prototype:              Mock AI
+Build:                  Successful
+Testing:                Passed
+Invalid Input Testing:  Passed
+AI Result Validation:   Passed
+
+Inventory Integration:  Complete
+Architecture:           Documented
+GitHub Upload:          Complete
+Status:                 ✅ Complete
 ```
 
 ---
 
 # ▶️ Building & Running
 
-## Module 02
+Compile all implementation files:
 
 ```bash
-g++ inventory_manager.cpp -o inventory_manager
+g++ -std=c++17 -Wall -Wextra -pedantic \
+main.cpp Product.cpp InventorySystem.cpp AIInventoryAssistant.cpp \
+-o inventory_manager
 ```
-
-## Module 03
-
-```bash
-g++ inventory_welcome.cpp -o inventory_welcome
-```
-
-## Module 04
-
-```bash
-g++ inventory_dataset.cpp -o inventory_dataset
-```
-
-Required dataset:
-
-```text
-data/SuperMarket Analysis.csv
-```
-
-## Module 05
-
-```bash
-g++ main.cpp InventoryTools.cpp -o inventory_manager
-```
-
-## Module 06
-
-```bash
-g++ main.cpp Product.cpp -o inventory_manager
-```
-
-## Module 07
-
-Compile all implementation files together:
-
-```bash
-g++ main.cpp Product.cpp User.cpp InventorySystem.cpp -o inventory_manager
-```
-
-## Module 08
-
-```bash
-g++ -std=c++17 main.cpp Product.cpp User.cpp InventorySystem.cpp InputValidator.cpp -o inventory_manager
-```
-
-## Midway Project
-
-From inside the `Midterm/` folder:
-
-```bash
-g++ -std=c++17 -Wall -Wextra -pedantic *.cpp -o inventory_manager
-```
-
-The Midway version reads and writes:
-
-```text
-inventory.txt
-```
-
-and includes:
-
-```text
-output.pdf
-```
-
-as the project report.
 
 ### Windows
 
@@ -1781,171 +879,69 @@ inventory_manager.exe
 
 ---
 
-# 🔐 Repository Safety
+# 🚀 Future Improvements
 
-This repository is public.
+A future version could replace the mock prototype with a live AI service or
+trained model.
 
-Sensitive or private information should never be committed.
+Possible improvements include:
 
-Do not commit:
-
-```text
-Passwords
-API Keys
-Access Tokens
-Private Credentials
-Database Passwords
-Authentication Secrets
-Confidential Information
-```
-
-The Module 7 role system demonstrates authorization logic but is not
-intended to be a production authentication system.
+- Predict demand from historical sales
+- Recommend reorder quantities
+- Detect unusual inventory changes
+- Identify slow-moving inventory
+- Generate natural-language inventory summaries
+- Allow natural-language inventory search
+- Analyze seasonal trends
+- Compare supplier lead times
+- Explain why a restock is recommended
 
 ---
 
-# 📈 Project Goal
+# 🧠 Responsible AI Design
 
-The application currently demonstrates the following progression:
+A future AI-powered Inventory Manager should not blindly trust model output.
 
 ```text
-Development Environment
-        │
-        ▼
-Application Flow
-        │
-        ▼
-Variables
-        │
-        ▼
-External Dataset
-        │
-        ▼
-CSV Input
-        │
-        ▼
-Arrays & Pointers
-        │
-        ▼
-Records
-        │
-        ▼
-Headers & Functions
-        │
-        ▼
-Classes & Objects
-        │
-        ▼
-Encapsulation
-        │
-        ▼
-Inheritance
-        │
-        ▼
-Roles & Permissions
-        │
-        ▼
-Sorted Records
-        │
-        ▼
-Binary Search
-        │
-        ▼
-Input Validation
-        │
-        ▼
-Dynamic Memory
-        │
-        ▼
-File I/O
-        │
-        ▼
-Persistent Inventory Storage
+Prepare Data
+    │
+    ▼
+Send Request
+    │
+    ▼
+Receive AI Result
+    │
+    ▼
+Validate Result
+    │
+    ▼
+Apply Business Rules
+    │
+    ▼
+Display Recommendation
+    │
+    ▼
+Human Makes Final Decision
 ```
 
-The Midway Project demonstrates how the concepts introduced throughout the
-first eight modules can work together inside one larger application.
-
-Future modules will continue expanding the Inventory Manager with additional
-application-design, database, and AI concepts.
+AI recommendations should assist the user rather than silently modify critical
+inventory data without review.
 
 ---
 
-# 📝 Current Status
+# 🔗 Links
 
-```text
-Project:       Inventory Manager
-Language:      C++
-Developer:     John Saldivar
-
-Module 01:     Complete
-Module 02:     Complete
-Module 03:     Complete
-Module 04:     Revised / Resubmitted
-Module 05:     Complete
-Module 06:     Complete
-Module 07:     Complete
-Module 08:     Complete
-
-Modules Done:  8 / 15
-Latest Module: Module 08
-
-Module 04 Revision:
-Kaggle CSV:    Included
-CSV Parsing:   Implemented
-Arrays:        Implemented
-Pointers:      Implemented
-Status:        Awaiting Regrade
-
-Module 08:
-Type Validation:      Implemented
-Range Validation:     Implemented
-Required Fields:      Implemented
-Date Validation:      Implemented
-Duplicate SKU Check:  Implemented
-Retry Logic:          Implemented
-Status:               Complete
-
-Midway Project:
-Inventory System:     Complete
-Dynamic Memory:       Implemented
-Pointers:             Implemented
-Arrays:               Implemented
-Binary Search:        Implemented
-File I/O:             Implemented
-Persistent Storage:   Implemented
-Classes:              Implemented
-Input Validation:     Implemented
-output.pdf:            Complete
-Status:                Complete
-
-Repository:    Public
-Development:   Active
-```
-
----
-
-# 🔗 Navigation
-
-### Course Repository
-
-[CPlusPlus-Application-Design](https://github.com/johnsaldivar/CPlusPlus-Application-Design)
-
-### Developer
-
+**Developer**  
 [John Saldivar](https://github.com/johnsaldivar)
 
-### Modules
+**Course Repository**  
+[CPlusPlus-Application-Design](https://github.com/johnsaldivar/CPlusPlus-Application-Design)
 
-- ✅ [Module 01 — Development Environment Setup](./Module01-Setup/)
-- ✅ [Module 02 — Menus, Switch Case & Application Flow](./Module02-Variables/)
-- ✅ [Module 03 — Variables, Cin & Cout](./Module03-Datasets-Arrays-Pointers/)
-- 🔄 [Module 04 — Datasets, Arrays & Pointers — Revised](./Module04-Functions-Headers/)
-- ✅ [Module 05 — Records, Headers & Functions](./Module05-Classes-Objects/)
-- ✅ [Module 06 — Creating Classes & Objects](./Module06-Records-Storage/)
-- ✅ [Module 07 — Security, Roles & Binary Search](./Module07-Security-Search/)
-- ✅ [Module 08 — Input Validation & Protecting Data](./Module08-Input-Validation/)
-- 🎓 [Midway Project — Inventory Management System](./Midterm/)
+**Previous Module**  
+[Module 08 — Input Validation & Protecting Data](../Module08-Input-Validation/)
+
+**Next Module**  
+[Module 10](../Module10-Future-of-AI/)
 
 ---
 
@@ -1953,18 +949,17 @@ Development:   Active
 
 ## 📦 Inventory Manager
 
-### C++ Application Design
+### Module 09 — Using AI to Expand Your Application
+
+**AI Restock Recommendation Assistant**
 
 **John Saldivar**
 
-![C++](https://img.shields.io/badge/C%2B%2B-Application%20Development-00599C?style=for-the-badge&logo=cplusplus&logoColor=white)
-![Modules](https://img.shields.io/badge/Modules%20Completed-8%20of%2015-success?style=for-the-badge)
-![Latest](https://img.shields.io/badge/Latest%20Module-08-blue?style=for-the-badge)
-![Validation](https://img.shields.io/badge/Input-Validation-success?style=for-the-badge)
-![Midway](https://img.shields.io/badge/Midway%20Project-Complete-success?style=for-the-badge)
-![Search](https://img.shields.io/badge/Search-Binary%20Search-orange?style=for-the-badge)
-![Revision](https://img.shields.io/badge/Module%2004-Awaiting%20Regrade-orange?style=for-the-badge)
-![GitHub](https://img.shields.io/badge/Version%20Control-GitHub-181717?style=for-the-badge&logo=github)
+![C++](https://img.shields.io/badge/C%2B%2B-AI%20Application-00599C?style=for-the-badge&logo=cplusplus&logoColor=white)
+![AI](https://img.shields.io/badge/AI-Restock%20Recommendations-purple?style=for-the-badge)
+![Prototype](https://img.shields.io/badge/Prototype-Mock%20AI-orange?style=for-the-badge)
+![Architecture](https://img.shields.io/badge/Architecture-Validated%20Results-success?style=for-the-badge)
+![Status](https://img.shields.io/badge/Module-Complete-success?style=for-the-badge)
 
 **Build → Test → Improve → Connect**
 
